@@ -19,8 +19,8 @@ export default function Clientlogin() {
     var height = Dimensions.get('window').height;
     const navigation = useNavigation();
 
-    const RedirectToHome = () => {
-        navigation.navigate("Home");
+    const RedirectToDashboard = () => {
+        navigation.navigate("Dashboard");
     };
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
@@ -75,7 +75,7 @@ export default function Clientlogin() {
                                 <Button
                                     style={{ marginBottom: 20, backgroundColor: "#f87c28" }}
                                     mode="contained"
-                                    onPress={() => RedirectToHome()}
+                                    onPress={() => RedirectToDashboard()}
                                 >
                                     Login
                                 </Button>
