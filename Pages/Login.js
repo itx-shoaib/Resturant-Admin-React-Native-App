@@ -19,9 +19,6 @@ export default function Clientlogin() {
     var height = Dimensions.get('window').height;
     const navigation = useNavigation();
 
-    const RedirectToRegister = () => {
-        navigation.navigate("Register");
-    };
     const RedirectToHome = () => {
         navigation.navigate("Home");
     };
@@ -83,12 +80,6 @@ export default function Clientlogin() {
                                     Login
                                 </Button>
                             </View>
-                            <Text style={{ textAlign: "center", marginBottom: 10 }}>
-                                Don't have an account?
-                            </Text>
-                            <Button color="grey" onPress={() => RedirectToRegister()}>
-                                Sign Up
-                            </Button>
                         </ScrollView>
                     </Card>
                 </View>
