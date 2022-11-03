@@ -20,6 +20,9 @@ export default function Resturant() {
     var width = Dimensions.get('window').width;
     var height = Dimensions.get('window').height;
     const navigation = useNavigation();
+    const RedirectToResturantManagement = () => {
+        navigation.navigate("ResturantManagement");
+    }
 
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
@@ -40,7 +43,7 @@ export default function Resturant() {
                     < Button icon="plus"
                         color="blue"
                         mode="contained"
-                        onPress={() => console.log('Pressed')}
+                        onPress={() => RedirectToResturantManagement()}
                     >resturant</Button>
                 </View>
                 <Card style={styles.orderInnerCard}>

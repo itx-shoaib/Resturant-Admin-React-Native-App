@@ -5,6 +5,7 @@ import Dashboard from './Pages/Dashboard';
 import Clientlogin from './Pages/Login';
 import Order from './Pages/Order';
 import Resturant from './Pages/Resturant';
+import ResturantManagement from './Pages/ResturantManagement';
 
 const Stack = createNativeStackNavigator();
 
@@ -43,6 +44,14 @@ export default function App() {
           options={{ header: () => null }}
           name="Resturant"
           component={Resturant}
+        />
+        <Stack.Screen
+          screenOptions={{
+            headerShown: false
+          }}
+          options={{ header: () => null }}
+          name="ResturantManagement"
+          component={ResturantManagement}
         />
         <Stack.Screen
           screenOptions={{
