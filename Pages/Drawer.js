@@ -23,8 +23,8 @@ export default function Drawer() {
     var height = Dimensions.get('window').height;
     const navigation = useNavigation();
 
-    const RedirectToOrder = () => {
-        navigation.navigate("Order");
+    const RedirectToDashboard = () => {
+        navigation.navigate("Dashboard");
     };
     const RedirectToliveOrder = () => {
         navigation.navigate("liveOrder");
@@ -40,7 +40,15 @@ export default function Drawer() {
     };
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
-            <Navbar />
+            <View style={{ alignItems: "flex-start", backgroundColor: '#fbfefa' }}>
+                <Button icon="arrow-left"
+                    color="blue"
+                    mode="text"
+                    onPress={RedirectToDashboard}
+                >
+                    Back
+                </Button>
+            </View>
             <ScrollView>
 
 
