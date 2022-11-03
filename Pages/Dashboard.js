@@ -32,7 +32,7 @@ export default function Dashboard() {
         navigation.navigate("items");
     };
     const RedirectToCustomer = () => {
-        navigation.navigate("customer");
+        navigation.navigate("Customer");
     };
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
