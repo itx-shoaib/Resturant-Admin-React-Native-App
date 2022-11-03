@@ -34,6 +34,9 @@ export default function Dashboard() {
     const RedirectToCustomer = () => {
         navigation.navigate("Customer");
     };
+    const RedirectToResturant = () => {
+        navigation.navigate("Resturant");
+    };
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
             <ScrollView>
@@ -124,7 +127,7 @@ export default function Dashboard() {
                                 shadowRadius: 3.84,
                                 elevation: 5,
                             }}
-                                onPress={() => { RedirectToItems() }}
+                                onPress={() => { RedirectToResturant() }}
                             >
                                 <View style={styles.scrollCardView}>
                                     {/* <IconButton icon="close" style={styles.closeIcon} /> */}

@@ -4,6 +4,7 @@ import Customer from './Pages/Customer';
 import Dashboard from './Pages/Dashboard';
 import Clientlogin from './Pages/Login';
 import Order from './Pages/Order';
+import Resturant from './Pages/Resturant';
 
 const Stack = createNativeStackNavigator();
 
@@ -34,6 +35,14 @@ export default function App() {
           options={{ header: () => null }}
           name="Customer"
           component={Customer}
+        />
+        <Stack.Screen
+          screenOptions={{
+            headerShown: false
+          }}
+          options={{ header: () => null }}
+          name="Resturant"
+          component={Resturant}
         />
         <Stack.Screen
           screenOptions={{
