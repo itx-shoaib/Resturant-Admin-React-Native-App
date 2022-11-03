@@ -23,8 +23,8 @@ export default function Navbar() {
     const navigation = useNavigation();
 
 
-    const RedirectToOrder = () => {
-        navigation.navigate("Order");
+    const RedirectToDrawer = () => {
+        navigation.navigate("Drawer");
     };
     const RedirectToliveOrder = () => {
         navigation.navigate("liveOrder");
@@ -60,7 +60,7 @@ export default function Navbar() {
                             <IconButton
                                 icon="align-vertical-distribute"
                                 size={24}
-                            // onPress={RedirectToCart}
+                                onPress={RedirectToDrawer}
                             />
 
                         </View>
