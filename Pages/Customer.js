@@ -13,6 +13,7 @@ import {
     FlatList
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import CustomersTable from "../Components/CustomersTable";
 
 
 export default function Customer() {
@@ -37,7 +38,7 @@ export default function Customer() {
                     }}>CLIENTS DATA</Text>
                 </View>
                 <Card style={styles.orderInnerCard}>
-                    {/* <OrdersTable /> */}
+                    <CustomersTable />
                 </Card>
             </Card>
 
