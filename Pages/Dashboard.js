@@ -15,6 +15,7 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import Datatable from '../Components/Datatable';
 import MapView from 'react-native-maps'
+import Navbar from "../Components/Navbar";
 
 
 export default function Dashboard() {
@@ -40,6 +41,7 @@ export default function Dashboard() {
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
             <ScrollView>
+                <Navbar />
 
                 <View style={{ display: 'flex', flexDirection: 'column', justifyContent: "space-between", backgroundColor: '#fbfefa' }}>
                     {/* Admin panel resturant open */}
