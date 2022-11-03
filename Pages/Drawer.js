@@ -26,11 +26,11 @@ export default function Drawer() {
     const RedirectToDashboard = () => {
         navigation.navigate("Dashboard");
     };
-    const RedirectToliveOrder = () => {
-        navigation.navigate("liveOrder");
+    const RedirectToOrder = () => {
+        navigation.navigate("Order");
     };
-    const RedirectToItems = () => {
-        navigation.navigate("items");
+    const RedirectToPage = () => {
+        navigation.navigate("Page");
     };
     const RedirectToCustomer = () => {
         navigation.navigate("Customer");
@@ -53,7 +53,114 @@ export default function Drawer() {
 
 
                 <View style={{ display: 'flex', flexDirection: 'column', justifyContent: "space-between", backgroundColor: '#fbfefa' }}>
-                    <Text>This is Drawer Screen</Text>
+                    <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
+                        <Button icon="camera" />
+                        <Text style={{
+                            margin: 10,
+                            fontSize: 20
+                        }}
+                            onPress={RedirectToDashboard}
+                        >Dashboard</Text>
+                    </View>
+                    <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
+                        <Button icon="camera" />
+                        <Text style={{
+                            margin: 10,
+                            fontSize: 20
+                        }}
+                            onPress={RedirectToOrder}
+                        >Orders</Text>
+                    </View>
+                    <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
+                        <Button icon="camera" />
+                        <Text style={{
+                            margin: 10,
+                            fontSize: 20
+                        }}>Ranks</Text>
+                    </View>
+                    <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
+                        <Button icon="camera" />
+                        <Text style={{
+                            margin: 10,
+                            fontSize: 20
+                        }}
+                            onPress={RedirectToResturant}
+                        >Resturants</Text>
+                    </View>
+                    <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
+                        <Button icon="camera" />
+                        <Text style={{
+                            margin: 10,
+                            fontSize: 20
+                        }}
+                            onPress={RedirectToPage}
+                        >Pages</Text>
+                    </View>
+                    <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
+                        <Button icon="camera" />
+                        <Text style={{
+                            margin: 10,
+                            fontSize: 20
+                        }}>Tasks</Text>
+                    </View>
+                    <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
+                        <Button icon="camera" />
+                        <Text style={{
+                            margin: 10,
+                            fontSize: 20
+                        }}>Reports</Text>
+                    </View>
+                    <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
+                        <Button icon="camera" />
+                        <Text style={{
+                            margin: 10,
+                            fontSize: 20
+                        }}>Translation</Text>
+                    </View>
+                    <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
+                        <Button icon="camera" />
+                        <Text style={{
+                            margin: 10,
+                            fontSize: 20
+                        }}>Passwords</Text>
+                    </View>
+                    <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
+                        <Button icon="camera" />
+                        <Text style={{
+                            margin: 10,
+                            fontSize: 20
+                        }}>Live Orders</Text>
+                    </View>
+                    <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
+                        <Button icon="camera" />
+                        <Text style={{
+                            margin: 10,
+                            fontSize: 20
+                        }}
+                            onPress={RedirectToCustomer}
+                        >Customer</Text>
+                    </View>
+                    <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
+                        <Button icon="camera" />
+                        <Text style={{
+                            margin: 10,
+                            fontSize: 20
+                        }}>Menu</Text>
+                    </View>
+                    <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
+                        <Button icon="camera" />
+                        <Text style={{
+                            margin: 10,
+                            fontSize: 20
+                        }}>Settings</Text>
+                    </View>
+                    <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
+                        <Button icon="camera" />
+                        <Text style={{
+                            margin: 10,
+                            fontSize: 20
+                        }}>Marketing</Text>
+                    </View>
 
                 </View >
             </ScrollView>
