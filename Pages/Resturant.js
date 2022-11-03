@@ -13,7 +13,7 @@ import {
     FlatList
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import CustomersTable from "../Components/CustomersTable";
+import ResturantTable from "../Components/ResturantTable"
 
 
 export default function Resturant() {
@@ -31,14 +31,20 @@ export default function Resturant() {
                 }}>Resturants</Text>
             </View>
             <Card style={styles.resturantCard}>
-                <View style={{ margin: 20 }}>
+                <View style={{ margin: 20, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "baseline" }}>
 
                     <Text style={{
-                        fontSize: 20
-                    }}>CLIENTS DATA</Text>
+                        fontSize: 15
+                    }}>RESTURANTS</Text>
+
+                    < Button icon="plus"
+                        color="blue"
+                        mode="contained"
+                        onPress={() => console.log('Pressed')}
+                    >resturant</Button>
                 </View>
                 <Card style={styles.orderInnerCard}>
-                    <CustomersTable />
+                    <ResturantTable />
                 </Card>
             </Card>
 
