@@ -221,7 +221,23 @@ export default function Dashboard() {
                         shadowRadius: 3.84,
                         elevation: 5,
                     }} >
-                        <Datatable />
+                        <Text style={{ margin: 15, fontSize: 20 }}>
+                            Live Resturants
+                        </Text>
+                        <Card style={{
+                            marginTop: 20,
+                            shadowColor: "#000",
+                            shadowOffset: {
+                                width: 0,
+                                height: 2,
+                            },
+                            shadowOpacity: 0.25,
+                            shadowRadius: 3.84,
+                            elevation: 5,
+                        }}>
+
+                            <Datatable />
+                        </Card>
                     </Card>
 
                     <Card style={{
