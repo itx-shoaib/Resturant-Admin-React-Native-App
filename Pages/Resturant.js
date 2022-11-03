@@ -14,6 +14,7 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import ResturantTable from "../Components/ResturantTable"
+import Navbar from "../Components/Navbar";
 
 
 export default function Resturant() {
@@ -26,6 +27,7 @@ export default function Resturant() {
 
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
+            <Navbar />
 
             {/* <FilterOrder /> */}
             <View style={{ alignItems: "center" }}>

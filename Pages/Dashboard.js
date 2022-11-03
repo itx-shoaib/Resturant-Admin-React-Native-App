@@ -40,8 +40,9 @@ export default function Dashboard() {
     };
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
+            <Navbar />
             <ScrollView>
-                <Navbar />
+
 
                 <View style={{ display: 'flex', flexDirection: 'column', justifyContent: "space-between", backgroundColor: '#fbfefa' }}>
                     {/* Admin panel resturant open */}

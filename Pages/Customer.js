@@ -14,6 +14,7 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import CustomersTable from "../Components/CustomersTable";
+import Navbar from "../Components/Navbar";
 
 
 export default function Customer() {
@@ -23,6 +24,7 @@ export default function Customer() {
 
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
+            <Navbar />
 
             {/* <FilterOrder /> */}
             <View style={{ alignItems: "center" }}>

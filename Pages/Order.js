@@ -14,6 +14,7 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import FilterOrder from "../Components/FilterOrder";
 import OrdersTable from "../Components/OrdersTable";
+import Navbar from "../Components/Navbar";
 
 
 export default function Order() {
@@ -26,6 +27,7 @@ export default function Order() {
     };
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
+            <Navbar />
             <ScrollView>
                 {/* <FilterOrder /> */}
                 <View style={{ alignItems: "center" }}>

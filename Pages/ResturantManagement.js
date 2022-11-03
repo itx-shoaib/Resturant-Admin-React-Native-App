@@ -12,6 +12,7 @@ import {
     SafeAreaView
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import Navbar from "../Components/Navbar";
 
 
 export default function Clientlogin() {
@@ -24,6 +25,7 @@ export default function Clientlogin() {
     }
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
+            <Navbar />
             <ScrollView>
                 <View style={{ margin: 20 }} >
                     <Text style={{
