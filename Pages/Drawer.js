@@ -38,6 +38,9 @@ export default function Drawer() {
     const RedirectToResturant = () => {
         navigation.navigate("Resturant");
     };
+    const RedirectToRank = () => {
+        navigation.navigate("Rank");
+    };
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
             <View style={{ alignItems: "flex-start", backgroundColor: '#fbfefa' }}>
@@ -76,7 +79,9 @@ export default function Drawer() {
                         <Text style={{
                             margin: 10,
                             fontSize: 20
-                        }}>Ranks</Text>
+                        }}
+                            onPress={RedirectToRank}>
+                            Ranks</Text>
                     </View>
                     <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
                         <Button icon="camera" />
