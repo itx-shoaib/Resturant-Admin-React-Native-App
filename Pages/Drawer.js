@@ -44,6 +44,9 @@ export default function Drawer() {
     const RedirectToChangePassword = () => {
         navigation.navigate("ChangePassword");
     };
+    const RedirectToOrdersReport = () => {
+        navigation.navigate("OrdersReport");
+    };
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
             <View style={{ alignItems: "flex-start", backgroundColor: '#fbfefa' }}>
@@ -116,7 +119,9 @@ export default function Drawer() {
                         <Text style={{
                             margin: 10,
                             fontSize: 20
-                        }}>Reports</Text>
+                        }}
+                            onPress={RedirectToOrdersReport}
+                        >Reports</Text>
                     </View>
                     <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
                         <Button icon="camera" />

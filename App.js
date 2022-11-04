@@ -13,6 +13,7 @@ import Rank from './Pages/Rank';
 import AddRank from "./Pages/AddRank"
 import EditRank from "./Pages/EditRank"
 import ChangePassword from "./Pages/ChangePassword"
+import OrdersReport from "./Pages/OrdersReport"
 
 const Stack = createNativeStackNavigator();
 
@@ -123,6 +124,14 @@ export default function App() {
           options={{ header: () => null }}
           name="ChangePassword"
           component={ChangePassword}
+        />
+        <Stack.Screen
+          screenOptions={{
+            headerShown: false
+          }}
+          options={{ header: () => null }}
+          name="OrdersReport"
+          component={OrdersReport}
         />
       </Stack.Navigator>
     </NavigationContainer>
