@@ -13,9 +13,8 @@ import {
     FlatList
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import Datatable from '../Components/Datatable';
-import MapView from 'react-native-maps'
 import Navbar from "../Components/Navbar";
+import OrdersReportTable from "../Components/OrdersReportTable";
 
 
 export default function OrdersReport() {
@@ -44,8 +43,12 @@ export default function OrdersReport() {
             <ScrollView>
 
 
+
                 <View style={{ display: 'flex', flexDirection: 'column', justifyContent: "space-between", backgroundColor: '#fbfefa' }}>
                     <ScrollView>
+                        <View style={{ margin: 30 }}>
+                            <Text style={{ fontSize: 30 }}>Orders Report</Text>
+                        </View>
                         <ScrollView horizontal={true}  >
                             <View style={{
                                 display: "flex",
@@ -183,7 +186,7 @@ export default function OrdersReport() {
                                 >$59,558.33</Button>
                             </View>
                             <Card style={styles.orderInnerCard}>
-                                <Text>Yes</Text>
+                                <OrdersReportTable />
                             </Card>
                         </Card>
 
@@ -202,9 +205,10 @@ export default function OrdersReport() {
 
 const styles = StyleSheet.create({
     resturantCard: {
-        marginTop: "30%",
+        marginTop: "15%",
         marginLeft: 30,
         marginRight: 30,
+        marginBottom: "40%",
         borderRadius: 20,
         shadowColor: "#000",
         shadowOffset: {
@@ -261,7 +265,18 @@ const styles = StyleSheet.create({
         alignItems: "center",
         margin: 20,
         padding: 15
-    }
+    },
+    orderInnerCard: {
+        marginTop: "10%",
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        elevation: 5,
+    },
 
 
 });
