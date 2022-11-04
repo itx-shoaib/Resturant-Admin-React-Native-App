@@ -22,7 +22,7 @@ export default function Rank() {
     var height = Dimensions.get('window').height;
     const navigation = useNavigation();
     const RedirectToAddPage = () => {
-        navigation.navigate("AddPage");
+        navigation.navigate("AddRank");
     }
 
     return (
