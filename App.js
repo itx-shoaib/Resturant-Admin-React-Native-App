@@ -14,6 +14,7 @@ import AddRank from "./Pages/AddRank"
 import EditRank from "./Pages/EditRank"
 import ChangePassword from "./Pages/ChangePassword"
 import OrdersReport from "./Pages/OrdersReport"
+import Profile from "./Pages/Profile"
 
 const Stack = createNativeStackNavigator();
 
@@ -132,6 +133,14 @@ export default function App() {
           options={{ header: () => null }}
           name="OrdersReport"
           component={OrdersReport}
+        />
+        <Stack.Screen
+          screenOptions={{
+            headerShown: false
+          }}
+          options={{ header: () => null }}
+          name="Profile"
+          component={Profile}
         />
       </Stack.Navigator>
     </NavigationContainer>

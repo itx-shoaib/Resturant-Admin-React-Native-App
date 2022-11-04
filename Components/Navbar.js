@@ -26,8 +26,8 @@ export default function Navbar() {
     const RedirectToDrawer = () => {
         navigation.navigate("Drawer");
     };
-    const RedirectToliveOrder = () => {
-        navigation.navigate("liveOrder");
+    const RedirectToProfile = () => {
+        navigation.navigate("Profile");
     };
     const RedirectToItems = () => {
         navigation.navigate("items");
@@ -53,7 +53,7 @@ export default function Navbar() {
                             <IconButton
                                 icon="account"
                                 size={24}
-                            // onPress={RedirectToProfile}
+                                onPress={RedirectToProfile}
                             />
                         </View>
                         <View style={{ backgroundColor: '#f8f4fc', borderRadius: 10 }}>
