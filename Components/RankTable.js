@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { DataTable, Button } from 'react-native-paper';
 import { StyleSheet, ScrollView, Image } from 'react-native';
+import { useNavigation } from "@react-navigation/native";
 
 const optionsPerPage = [2, 3, 4];
 
@@ -8,6 +9,11 @@ const RankTable = () => {
     const [page, setPage] = React.useState(0);
     // const [page, setPage] = React.useState < number > (0);
     const [itemsPerPage, setItemsPerPage] = React.useState(optionsPerPage[0]);
+    const navigation = useNavigation();
+    const RedirectToEditRank = () => {
+        navigation.navigate("EditRank");
+    }
+
 
     React.useEffect(() => {
         setPage(0);
@@ -29,7 +35,21 @@ const RankTable = () => {
                     <DataTable.Cell style={{ marginRight: 20, marginTop: 10 }}>Silver</DataTable.Cell>
                     <DataTable.Cell style={{ marginRight: 20 }}>10</DataTable.Cell>
                     <DataTable.Cell style={{ marginLeft: 20, marginRight: 20 }}>Active</DataTable.Cell>
-                    <DataTable.Cell style={{ marginRight: 20 }}><Button title="Edit" mode="contained">Edit</Button></DataTable.Cell>
+                    <DataTable.Cell style={{ marginRight: 20 }}><Button title="Edit" mode="contained" onPress={RedirectToEditRank}>Edit</Button></DataTable.Cell>
+                </DataTable.Row>
+                <DataTable.Row>
+                    <DataTable.Cell style={{ marginRight: 20 }}>2</DataTable.Cell>
+                    <DataTable.Cell style={{ marginRight: 20, marginTop: 10 }}>Gold</DataTable.Cell>
+                    <DataTable.Cell style={{ marginRight: 20 }}>20</DataTable.Cell>
+                    <DataTable.Cell style={{ marginLeft: 20, marginRight: 20 }}>Active</DataTable.Cell>
+                    <DataTable.Cell style={{ marginRight: 20 }}><Button title="Edit" mode="contained" onPress={RedirectToEditRank}>Edit</Button></DataTable.Cell>
+                </DataTable.Row>
+                <DataTable.Row>
+                    <DataTable.Cell style={{ marginRight: 20 }}>3</DataTable.Cell>
+                    <DataTable.Cell style={{ marginRight: 20, marginTop: 10 }}>Gold</DataTable.Cell>
+                    <DataTable.Cell style={{ marginRight: 20 }}>100</DataTable.Cell>
+                    <DataTable.Cell style={{ marginLeft: 20, marginRight: 20 }}>Active</DataTable.Cell>
+                    <DataTable.Cell style={{ marginRight: 20 }}><Button title="Edit" mode="contained" onPress={RedirectToEditRank}>Edit</Button></DataTable.Cell>
                 </DataTable.Row>
 
                 <DataTable.Pagination
