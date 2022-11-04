@@ -15,7 +15,7 @@ import { useNavigation } from "@react-navigation/native";
 import Navbar from "../Components/Navbar";
 
 
-export default function Clientlogin() {
+export default function AddPage() {
     var width = Dimensions.get('window').width;
     var height = Dimensions.get('window').height;
     const navigation = useNavigation();
