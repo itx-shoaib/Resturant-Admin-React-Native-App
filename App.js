@@ -5,6 +5,7 @@ import Dashboard from './Pages/Dashboard';
 import Drawer from './Pages/Drawer';
 import Clientlogin from './Pages/Login';
 import Order from './Pages/Order';
+import Page from './Pages/Page';
 import Resturant from './Pages/Resturant';
 import ResturantManagement from './Pages/ResturantManagement';
 
@@ -69,6 +70,14 @@ export default function App() {
           options={{ header: () => null }}
           name="Drawer"
           component={Drawer}
+        />
+        <Stack.Screen
+          screenOptions={{
+            headerShown: false
+          }}
+          options={{ header: () => null }}
+          name="Page"
+          component={Page}
         />
       </Stack.Navigator>
     </NavigationContainer>
