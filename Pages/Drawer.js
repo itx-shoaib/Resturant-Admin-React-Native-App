@@ -1,4 +1,4 @@
-import { Button, Card, IconButton } from "react-native-paper";
+import { Button, List, Card, IconButton } from "react-native-paper";
 import {
     StyleSheet,
     Text,
@@ -10,7 +10,7 @@ import {
     Dimensions,
     Platform,
     SafeAreaView,
-    FlatList
+    TouchableOpacity
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import Datatable from '../Components/Datatable';
@@ -47,6 +47,80 @@ export default function Drawer() {
     const RedirectToOrdersReport = () => {
         navigation.navigate("OrdersReport");
     };
+
+    const drawerlist = [
+        {
+            icon: "home",
+            title: "Dashboard",
+            path: RedirectToDashboard
+        },
+        {
+            icon: "clipboard-list-outline",
+            title: "Orders",
+            path: RedirectToOrder
+        },
+        {
+            icon: "podium",
+            title: "Ranks",
+            path: RedirectToRank
+        },
+        {
+            icon: "silverware-fork-knife",
+            title: "Resturants",
+            path: RedirectToResturant
+        },
+        {
+            icon: "calendar-text-outline",
+            title: "Pages",
+            path: RedirectToPage
+        },
+        {
+            icon: "logout",
+            title: "Tasks",
+            path: RedirectToPage
+        },
+        {
+            icon: "book",
+            title: "Reports",
+            path: RedirectToOrdersReport
+        },
+        {
+            icon: "logout",
+            title: "Translation",
+            path: RedirectToOrdersReport
+        },
+        {
+            icon: "lock",
+            title: "Passwords",
+            path: RedirectToChangePassword
+        },
+        {
+            icon: "logout",
+            title: "Live Orders",
+            path: RedirectToChangePassword
+        },
+        {
+            icon: "account",
+            title: "Customer",
+            path: RedirectToCustomer
+        },
+        {
+            icon: "logout",
+            title: "Menu",
+            path: RedirectToCustomer
+        },
+        {
+            icon: "logout",
+            title: "Settings",
+            path: RedirectToCustomer
+        },
+        {
+            icon: "logout",
+            title: "Marketing",
+            path: RedirectToCustomer
+        },
+
+    ]
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
             <View style={{ alignItems: "flex-start", backgroundColor: '#fbfefa' }}>
@@ -62,120 +136,15 @@ export default function Drawer() {
 
 
                 <View style={{ display: 'flex', flexDirection: 'column', justifyContent: "space-between", backgroundColor: '#fbfefa' }}>
-                    <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
-                        <Button icon="camera" />
-                        <Text style={{
-                            margin: 10,
-                            fontSize: 20
-                        }}
-                            onPress={RedirectToDashboard}
-                        >Dashboard</Text>
-                    </View>
-                    <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
-                        <Button icon="camera" />
-                        <Text style={{
-                            margin: 10,
-                            fontSize: 20
-                        }}
-                            onPress={RedirectToOrder}
-                        >Orders</Text>
-                    </View>
-                    <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
-                        <Button icon="camera" />
-                        <Text style={{
-                            margin: 10,
-                            fontSize: 20
-                        }}
-                            onPress={RedirectToRank}>
-                            Ranks</Text>
-                    </View>
-                    <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
-                        <Button icon="camera" />
-                        <Text style={{
-                            margin: 10,
-                            fontSize: 20
-                        }}
-                            onPress={RedirectToResturant}
-                        >Resturants</Text>
-                    </View>
-                    <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
-                        <Button icon="camera" />
-                        <Text style={{
-                            margin: 10,
-                            fontSize: 20
-                        }}
-                            onPress={RedirectToPage}
-                        >Pages</Text>
-                    </View>
-                    <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
-                        <Button icon="camera" />
-                        <Text style={{
-                            margin: 10,
-                            fontSize: 20
-                        }}>Tasks</Text>
-                    </View>
-                    <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
-                        <Button icon="camera" />
-                        <Text style={{
-                            margin: 10,
-                            fontSize: 20
-                        }}
-                            onPress={RedirectToOrdersReport}
-                        >Reports</Text>
-                    </View>
-                    <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
-                        <Button icon="camera" />
-                        <Text style={{
-                            margin: 10,
-                            fontSize: 20
-                        }}>Translation</Text>
-                    </View>
-                    <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
-                        <Button icon="camera" />
-                        <Text style={{
-                            margin: 10,
-                            fontSize: 20
-                        }}
-                            onPress={RedirectToChangePassword}
-                        >Passwords</Text>
-                    </View>
-                    <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
-                        <Button icon="camera" />
-                        <Text style={{
-                            margin: 10,
-                            fontSize: 20
-                        }}>Live Orders</Text>
-                    </View>
-                    <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
-                        <Button icon="camera" />
-                        <Text style={{
-                            margin: 10,
-                            fontSize: 20
-                        }}
-                            onPress={RedirectToCustomer}
-                        >Customer</Text>
-                    </View>
-                    <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
-                        <Button icon="camera" />
-                        <Text style={{
-                            margin: 10,
-                            fontSize: 20
-                        }}>Menu</Text>
-                    </View>
-                    <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
-                        <Button icon="camera" />
-                        <Text style={{
-                            margin: 10,
-                            fontSize: 20
-                        }}>Settings</Text>
-                    </View>
-                    <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
-                        <Button icon="camera" />
-                        <Text style={{
-                            margin: 10,
-                            fontSize: 20
-                        }}>Marketing</Text>
-                    </View>
+                    {drawerlist.map((idx, index) => (
+                        <TouchableOpacity onPress={idx.path
+                        } key={idx.key}>
+                            <List.Item
+                                title={idx.title}
+                                left={props => <List.Icon {...props} icon={idx.icon} color='black' />}
+                            />
+                        </TouchableOpacity>
+                    ))}
 
                 </View >
             </ScrollView>
