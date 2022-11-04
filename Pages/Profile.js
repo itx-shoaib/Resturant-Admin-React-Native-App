@@ -41,7 +41,7 @@ export default function Profile() {
             path: RedirectToEditProfile
         },
         {
-            icon: "logout",
+            icon: "home",
             title: "Dashboard",
             path: RedirectToDashboard
         },
@@ -51,22 +51,22 @@ export default function Profile() {
             path: RedirectToLogin
         },
         {
-            icon: "history",
+            icon: "clipboard-list-outline",
             title: "Orders",
             path: RedirectToPastOrders
         },
         {
-            icon: "logout",
+            icon: "silverware-fork-knife",
             title: "Resturants",
             path: RedirectToResturant
         },
         {
-            icon: "logout",
+            icon: "account",
             title: "Customers",
             path: RedirectToCustomer
         },
         {
-            icon: "logout",
+            icon: "calendar-text-outline",
             title: "Pages",
             path: RedirectToPage
         },
