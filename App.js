@@ -12,6 +12,7 @@ import AddPage from './Pages/AddPage'
 import Rank from './Pages/Rank';
 import AddRank from "./Pages/AddRank"
 import EditRank from "./Pages/EditRank"
+import ChangePassword from "./Pages/ChangePassword"
 
 const Stack = createNativeStackNavigator();
 
@@ -114,6 +115,14 @@ export default function App() {
           options={{ header: () => null }}
           name="EditRank"
           component={EditRank}
+        />
+        <Stack.Screen
+          screenOptions={{
+            headerShown: false
+          }}
+          options={{ header: () => null }}
+          name="ChangePassword"
+          component={ChangePassword}
         />
       </Stack.Navigator>
     </NavigationContainer>

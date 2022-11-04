@@ -41,6 +41,9 @@ export default function Drawer() {
     const RedirectToRank = () => {
         navigation.navigate("Rank");
     };
+    const RedirectToChangePassword = () => {
+        navigation.navigate("ChangePassword");
+    };
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
             <View style={{ alignItems: "flex-start", backgroundColor: '#fbfefa' }}>
@@ -127,7 +130,9 @@ export default function Drawer() {
                         <Text style={{
                             margin: 10,
                             fontSize: 20
-                        }}>Passwords</Text>
+                        }}
+                            onPress={RedirectToChangePassword}
+                        >Passwords</Text>
                     </View>
                     <View style={{ display: "flex", flexDirection: "row", alignItems: "baseline" }}>
                         <Button icon="camera" />
