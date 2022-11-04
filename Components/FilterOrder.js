@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { List } from 'react-native-paper';
+import FilterByResturant from './FilterByResturant';
 
 const FilterOrder = () => {
     const [expanded, setExpanded] = React.useState(true);
@@ -10,8 +11,7 @@ const FilterOrder = () => {
         <List.Section>
             <List.Accordion
                 title="Filter">
-                <List.Item title="First item" />
-                <List.Item title="Second item" />
+                <FilterByResturant />
             </List.Accordion>
         </List.Section>
     );
