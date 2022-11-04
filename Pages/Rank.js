@@ -14,7 +14,7 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import Navbar from "../Components/Navbar";
-import PageTable from "../Components/PageTable";
+import RankTable from "../Components/RankTable";
 
 
 export default function Rank() {
@@ -33,23 +33,23 @@ export default function Rank() {
             <View style={{ alignItems: "center" }}>
                 <Text style={{
                     fontSize: 60
-                }}>Pages</Text>
+                }}>Ranks</Text>
             </View>
             <Card style={styles.resturantCard}>
                 <View style={{ margin: 20, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "baseline" }}>
 
                     <Text style={{
                         fontSize: 15
-                    }}>PAGES</Text>
+                    }}>RANKS</Text>
 
                     < Button icon="plus"
                         color="blue"
                         mode="contained"
                         onPress={() => RedirectToAddPage()}
-                    >Page</Button>
+                    >RANK</Button>
                 </View>
                 <Card style={styles.orderInnerCard}>
-                    <PageTable />
+                    <RankTable />
                 </Card>
             </Card>
 
