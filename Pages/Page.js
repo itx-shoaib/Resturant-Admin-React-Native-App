@@ -13,7 +13,8 @@ import {
     FlatList
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import ResturantTable from "../Components/ResturantTable"
+import Navbar from "../Components/Navbar";
+import PageTable from "../Components/PageTable";
 
 
 export default function Page() {
@@ -26,28 +27,29 @@ export default function Page() {
 
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
+            <Navbar />
 
             {/* <FilterOrder /> */}
             <View style={{ alignItems: "center" }}>
                 <Text style={{
                     fontSize: 60
-                }}>Resturants</Text>
+                }}>Pages</Text>
             </View>
             <Card style={styles.resturantCard}>
                 <View style={{ margin: 20, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "baseline" }}>
 
                     <Text style={{
                         fontSize: 15
-                    }}>RESTURANTS</Text>
+                    }}>PAGES</Text>
 
                     < Button icon="plus"
                         color="blue"
                         mode="contained"
                         onPress={() => RedirectToResturantManagement()}
-                    >resturant</Button>
+                    >Page</Button>
                 </View>
                 <Card style={styles.orderInnerCard}>
-                    <ResturantTable />
+                    <PageTable />
                 </Card>
             </Card>
 
