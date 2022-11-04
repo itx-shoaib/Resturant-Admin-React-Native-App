@@ -29,12 +29,12 @@ export default function Order() {
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
             <Navbar />
             <ScrollView>
-                {/* <FilterOrder /> */}
                 <View style={{ alignItems: "center" }}>
                     <Text style={{
                         fontSize: 60
                     }}>Order</Text>
                 </View>
+                <FilterOrder />
                 <Card style={styles.resturantCard}>
                     <View style={{ margin: 20 }}>
 
