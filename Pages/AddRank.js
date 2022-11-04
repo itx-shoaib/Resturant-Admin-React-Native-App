@@ -1,4 +1,5 @@
-import { Button, Card } from "react-native-paper";
+import * as React from 'react';
+import { Button, Card, Switch } from "react-native-paper";
 import {
     StyleSheet,
     Text,
@@ -20,8 +21,11 @@ export default function AddRank() {
     var height = Dimensions.get('window').height;
     const navigation = useNavigation();
 
+    const [isSwitchOn, setIsSwitchOn] = React.useState(false);
+    const onToggleSwitch = () => setIsSwitchOn(!isSwitchOn);
+
     const RedirectToPage = () => {
-        navigation.navigate("Page");
+        navigation.navigate("Rank");
     }
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
@@ -43,20 +47,23 @@ export default function AddRank() {
                             color="blue"
                             mode="contained"
                             onPress={() => RedirectToPage()}
-                        >back to Pages</Button>
+                        >back to ranks</Button>
                     </View>
                     <Card style={styles.orderInnerCard}>
-                        <Text style={styles.labelText}>Title:</Text>
+                        <Text style={styles.labelText}>Name:</Text>
                         <TextInput
-                            placeholder="Name"
+                            placeholder="Rank name"
                             style={styles.Textfields}
                         ></TextInput>
 
-                        <Text style={styles.labelText}>Content:</Text>
+                        <Text style={styles.labelText}>Default value:</Text>
                         <TextInput
-                            placeholder="Content Here..."
+                            placeholder="Default value"
                             style={styles.Textfields}
                         ></TextInput>
+                        <View style={{ margin: 10 }}>
+                            <Switch value={isSwitchOn} onValueChange={onToggleSwitch} />
+                        </View>
                         <View style={{ alignItems: "flex-end", margin: 20 }}>
                             <Button mode="contained" onPress={() => RedirectToPage()}>Save</Button>
                         </View>
