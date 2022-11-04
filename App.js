@@ -10,6 +10,7 @@ import Resturant from './Pages/Resturant';
 import ResturantManagement from './Pages/ResturantManagement';
 import AddPage from './Pages/AddPage'
 import Rank from './Pages/Rank';
+import AddRank from "./Pages/AddRank"
 
 const Stack = createNativeStackNavigator();
 
@@ -96,6 +97,14 @@ export default function App() {
           options={{ header: () => null }}
           name="Rank"
           component={Rank}
+        />
+        <Stack.Screen
+          screenOptions={{
+            headerShown: false
+          }}
+          options={{ header: () => null }}
+          name="AddRank"
+          component={AddRank}
         />
       </Stack.Navigator>
     </NavigationContainer>
