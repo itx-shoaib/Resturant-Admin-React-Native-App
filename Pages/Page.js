@@ -21,8 +21,8 @@ export default function Page() {
     var width = Dimensions.get('window').width;
     var height = Dimensions.get('window').height;
     const navigation = useNavigation();
-    const RedirectToResturantManagement = () => {
-        navigation.navigate("ResturantManagement");
+    const RedirectToAddPage = () => {
+        navigation.navigate("AddPage");
     }
 
     return (
@@ -45,7 +45,7 @@ export default function Page() {
                     < Button icon="plus"
                         color="blue"
                         mode="contained"
-                        onPress={() => RedirectToResturantManagement()}
+                        onPress={() => RedirectToAddPage()}
                     >Page</Button>
                 </View>
                 <Card style={styles.orderInnerCard}>

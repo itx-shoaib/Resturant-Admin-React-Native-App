@@ -8,6 +8,7 @@ import Order from './Pages/Order';
 import Page from './Pages/Page';
 import Resturant from './Pages/Resturant';
 import ResturantManagement from './Pages/ResturantManagement';
+import AddPage from './Pages/AddPage'
 
 const Stack = createNativeStackNavigator();
 
@@ -78,6 +79,14 @@ export default function App() {
           options={{ header: () => null }}
           name="Page"
           component={Page}
+        />
+        <Stack.Screen
+          screenOptions={{
+            headerShown: false
+          }}
+          options={{ header: () => null }}
+          name="AddPage"
+          component={AddPage}
         />
       </Stack.Navigator>
     </NavigationContainer>
