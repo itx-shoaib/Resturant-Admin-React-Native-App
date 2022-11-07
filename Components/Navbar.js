@@ -44,26 +44,24 @@ export default function Navbar() {
 
 
                 <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', margin: 20 }}>
+                    <View style={{ backgroundColor: '#f8f4fc', borderRadius: 10 }}>
+                        <IconButton
+                            icon="align-vertical-distribute"
+                            size={24}
+                            onPress={RedirectToDrawer}
+                        />
+
+                    </View>
                     <Image
                         style={{ height: 50, width: 50 }}
                         source={{ uri: 'https://www.happyspizzaburger.co.uk/uploads/restorants/198031cc-1875-4d54-8945-8135a96f353a_large.jpg' }}
                     />
-                    <View style={{ display: 'flex', flexDirection: 'row' }}>
-                        <View style={{ backgroundColor: '#f8f4fc', borderRadius: 10, marginRight: 10 }}>
-                            <IconButton
-                                icon="account"
-                                size={24}
-                                onPress={RedirectToProfile}
-                            />
-                        </View>
-                        <View style={{ backgroundColor: '#f8f4fc', borderRadius: 10 }}>
-                            <IconButton
-                                icon="align-vertical-distribute"
-                                size={24}
-                                onPress={RedirectToDrawer}
-                            />
-
-                        </View>
+                    <View style={{ backgroundColor: '#f8f4fc', borderRadius: 10, marginRight: 10 }}>
+                        <IconButton
+                            icon="account"
+                            size={24}
+                            onPress={RedirectToProfile}
+                        />
                     </View>
 
                 </View>
