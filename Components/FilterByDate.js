@@ -13,24 +13,20 @@ export default function FilterByDate() {
     const [valueenddate, setvalueenddate] = useState()
 
     function showDatePicker() {
-        console.log(".")
         setDatePicker(true);
     };
 
     function showDatePicker2() {
-        console.log(".")
         setDatePicker(true);
     };
 
     function onDateSelected(event, value) {
         setDate(value);
-        console.log(date)
         setvaluefromdate(moment(date).format("MMM Do YY"))
         setDatePicker(false);
     };
     function onDateSelected2(event, value) {
         setDate2(value);
-        console.log(date)
         setvalueenddate(moment(date).format("MMM Do YY"))
         setDatePicker2(false);
     };
@@ -56,9 +52,9 @@ export default function FilterByDate() {
                         flexDirection: "row",
                         justifyContent: "space-between",
                     }}>
-                        <TextInput placeholder="From Date" style={{ height: 50 }} value={valuefromdate} showSoftInputOnFocus={false} onFocus={showDatePicker} />
+                        <TextInput placeholder="From Date" style={{ height: 50, marginLeft: 15 }} value={valuefromdate} showSoftInputOnFocus={false} onFocus={showDatePicker} />
                         <Text style={{ margin: 18 }}>To </Text>
-                        <TextInput style={{ height: 50 }} placeholder="From Date" value={valueenddate} showSoftInputOnFocus={false} onFocus={showDatePicker2} />
+                        <TextInput style={{ height: 50, marginRight: 15 }} placeholder="From Date" value={valueenddate} showSoftInputOnFocus={false} onFocus={showDatePicker2} />
                     </View>
                 </Card>
 

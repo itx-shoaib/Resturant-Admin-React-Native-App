@@ -29,36 +29,43 @@ export default function Order() {
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
             <Navbar />
             <ScrollView>
-                <View style={{ alignItems: "center" }}>
+                <View style={{ margin: 20 }}>
                     <Text style={{
                         fontSize: 60
-                    }}>Order</Text>
+                    }}>ORDERS</Text>
                 </View>
-                <FilterOrder />
-                <Card style={styles.resturantCard}>
-                    <View style={{ margin: 20 }}>
+                <View style={{ margin: 20 }}>
 
-                        <Text style={{
-                            fontSize: 20
-                        }}>Order History</Text>
-                    </View>
-                    <Card style={styles.orderInnerCard}>
-                        <OrdersTable />
+                    <FilterOrder />
+                </View>
+                <View style={{ marginBottom: 120 }}>
+
+
+                    <Card style={styles.resturantCard}>
+                        <View style={{ margin: 20 }}>
+
+                            <Text style={{
+                                fontSize: 20
+                            }}>Order History</Text>
+                        </View>
+                        <Card style={styles.orderInnerCard}>
+                            <OrdersTable />
+                        </Card>
                     </Card>
-                </Card>
 
 
-                <Card style={styles.resturantCard}>
-                    <View style={{ margin: 20 }}>
+                    <Card style={styles.resturantCard}>
+                        <View style={{ margin: 20 }}>
 
-                        <Text style={{
-                            fontSize: 20
-                        }}>Order History</Text>
-                    </View>
-                    <Card style={styles.orderInnerCard}>
-                        <OrdersTable />
+                            <Text style={{
+                                fontSize: 20
+                            }}>Order History</Text>
+                        </View>
+                        <Card style={styles.orderInnerCard}>
+                            <OrdersTable />
+                        </Card>
                     </Card>
-                </Card>
+                </View>
             </ScrollView>
         </SafeAreaView>
     );
@@ -66,9 +73,9 @@ export default function Order() {
 
 const styles = StyleSheet.create({
     resturantCard: {
-        marginTop: "30%",
-        marginLeft: 30,
-        marginRight: 30,
+        marginTop: "5%",
+        marginLeft: 20,
+        marginRight: 20,
         marginBottom: 60,
         borderRadius: 20,
         shadowColor: "#000",

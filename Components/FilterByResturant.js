@@ -37,9 +37,9 @@ export default function FilterByResturant() {
                     <RNPickerSelect
                         onValueChange={(value) => console.log(value)}
                         items={[
-                            { label: 'Football', value: 'football' },
-                            { label: 'Baseball', value: 'baseball' },
-                            { label: 'Hockey', value: 'hockey' },
+                            { label: 'KFC', value: 'KFC' },
+                            { label: 'Dagwood', value: 'Dagwood' },
+                            { label: 'Mcdonalds', value: 'Mcdonalds' },
                         ]}
                     />
                 </View>
