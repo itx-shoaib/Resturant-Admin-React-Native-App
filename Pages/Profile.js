@@ -34,11 +34,14 @@ export default function Profile() {
     const RedirectToMyAddresses = () => {
         navigation.navigate("My-Addresses");
     };
+    const RedirectToMyProfile = () => {
+        navigation.navigate("MyProfile");
+    };
     const settingmenu = [
         {
             icon: "account-edit",
             title: "My Profile",
-            path: RedirectToEditProfile
+            path: RedirectToMyProfile
         },
         {
             icon: "home",
