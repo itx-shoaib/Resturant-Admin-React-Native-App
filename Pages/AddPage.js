@@ -29,8 +29,8 @@ export default function AddPage() {
             <ScrollView>
                 <View style={{ margin: 20 }} >
                     <Text style={{
-                        fontSize: 30
-                    }}>Pages</Text>
+                        fontSize: 60
+                    }}>PAGES</Text>
                 </View>
                 <Card style={styles.resturantCard}>
                     <View style={{ margin: 7, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "baseline" }}>
@@ -70,7 +70,7 @@ export default function AddPage() {
 
 const styles = StyleSheet.create({
     resturantCard: {
-        marginTop: "30%",
+        marginTop: "5%",
         marginLeft: 20,
         marginRight: 20,
         marginBottom: 60,

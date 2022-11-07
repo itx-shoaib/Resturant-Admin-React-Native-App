@@ -32,8 +32,8 @@ export default function Resturant() {
             {/* <FilterOrder /> */}
             <View style={{ margin: 20 }}>
                 <Text style={{
-                    fontSize: 60
-                }}>Resturants</Text>
+                    fontSize: 40
+                }}>RESTURANTS</Text>
             </View>
             <Card style={styles.resturantCard}>
                 <View style={{ margin: 20, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "baseline" }}>
