@@ -30,10 +30,10 @@ export default function Rank() {
             <Navbar />
 
             {/* <FilterOrder /> */}
-            <View style={{ alignItems: "center" }}>
+            <View style={{ margin: 20 }}>
                 <Text style={{
                     fontSize: 60
-                }}>Ranks</Text>
+                }}>RANKS</Text>
             </View>
             <Card style={styles.resturantCard}>
                 <View style={{ margin: 20, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "baseline" }}>
@@ -60,9 +60,10 @@ export default function Rank() {
 
 const styles = StyleSheet.create({
     resturantCard: {
-        marginTop: "30%",
-        marginLeft: 30,
-        marginRight: 30,
+        marginTop: "5%",
+        marginLeft: 20,
+        marginRight: 20,
+        marginBottom: 60,
         borderRadius: 20,
         shadowColor: "#000",
         shadowOffset: {
