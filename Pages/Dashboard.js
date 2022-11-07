@@ -1,4 +1,5 @@
 import { Button, Card, IconButton } from "react-native-paper";
+import React, { useEffect, useRef } from 'react';
 import {
     StyleSheet,
     Text,
@@ -10,15 +11,16 @@ import {
     Dimensions,
     Platform,
     SafeAreaView,
-    FlatList
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import Datatable from '../Components/Datatable';
 import MapView from 'react-native-maps'
 import Navbar from "../Components/Navbar";
+import BackgroundAnimation from "../Components/BackgroundAnimation";
 
 
 export default function Dashboard() {
+
     var width = Dimensions.get('window').width;
     var height = Dimensions.get('window').height;
     const navigation = useNavigation();
@@ -42,15 +44,31 @@ export default function Dashboard() {
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
             <Navbar />
             <ScrollView>
+                {/* <AnimetedImage
+                    resizeMode="repeat"
+                    style={[styles.background, {
+                        transform: [
+                            {
+                                translateX: translateAnimation,
+                            },
+                            {
+                                translateY: translateAnimation,
+                            },
+                        ],
+                    }]}
+                    source={backgroundImage} /> */}
+                <BackgroundAnimation />
 
 
-                <View style={{ display: 'flex', flexDirection: 'column', justifyContent: "space-between", backgroundColor: '#fbfefa' }}>
+
+                <View style={{ display: 'flex', flexDirection: 'column', justifyContent: "space-between" }}>
                     <View style={{ margin: 20 }}>
                         <Text style={{
                             fontSize: 40
                         }}>DASHBOARD</Text>
                     </View>
                     {/* Admin panel resturant open */}
+
                     <Card style={styles.resturantCard}>
                         <View style={styles.resturantMainView}>
                             {/* <View>
