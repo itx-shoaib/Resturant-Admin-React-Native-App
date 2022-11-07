@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { DataTable } from 'react-native-paper';
-import { StyleSheet, ScrollView, Image } from 'react-native';
+import { DataTable, Badge, Button, Menu, Divider, Provider } from 'react-native-paper';
+import { StyleSheet, ScrollView, View, Image } from 'react-native';
 
 const optionsPerPage = [2, 3, 4];
 
@@ -8,6 +8,12 @@ const CustomersTable = () => {
     const [page, setPage] = React.useState(0);
     // const [page, setPage] = React.useState < number > (0);
     const [itemsPerPage, setItemsPerPage] = React.useState(optionsPerPage[0]);
+
+    // For dropdown menu
+    const [visible, setVisible] = React.useState(false);
+    const openMenu = () => setVisible(true);
+    const closeMenu = () => setVisible(false);
+
 
     React.useEffect(() => {
         setPage(0);
@@ -33,8 +39,8 @@ const CustomersTable = () => {
                     <DataTable.Cell style={{ marginRight: 20 }}>Christopher</DataTable.Cell>
                     <DataTable.Cell style={{ marginRight: 20 }}>Christopher@gmail.com</DataTable.Cell>
                     <DataTable.Cell style={{ marginRight: 20 }}>24 OCt 2021</DataTable.Cell>
-                    <DataTable.Cell style={{ marginRight: 20 }}>Active</DataTable.Cell>
-                    <DataTable.Cell style={{ marginRight: 20 }}>Live</DataTable.Cell>
+                    <DataTable.Cell style={{ marginRight: 20 }}><Badge style={{ backgroundColor: "#03cfb7" }} size={25}> Active</Badge></DataTable.Cell>
+                    <DataTable.Cell style={{ marginRight: 20 }}><Badge style={{ backgroundColor: "#03cfb7" }} size={25}> Live</Badge></DataTable.Cell>
                     <DataTable.Cell style={{ marginRight: 20 }}>icon</DataTable.Cell>
                 </DataTable.Row>
                 <DataTable.Row>
@@ -43,9 +49,26 @@ const CustomersTable = () => {
                     <DataTable.Cell style={{ marginRight: 20 }}>Christopher</DataTable.Cell>
                     <DataTable.Cell style={{ marginRight: 20 }}>Christopher@gmail.com</DataTable.Cell>
                     <DataTable.Cell style={{ marginRight: 20 }}>24 OCt 2021</DataTable.Cell>
-                    <DataTable.Cell style={{ marginRight: 20 }}>Active</DataTable.Cell>
-                    <DataTable.Cell style={{ marginRight: 20 }}>Live</DataTable.Cell>
-                    <DataTable.Cell style={{ marginRight: 20 }}>icon</DataTable.Cell>
+                    <DataTable.Cell style={{ marginRight: 20 }}><Badge style={{ backgroundColor: "red" }} >Not Active</Badge></DataTable.Cell>
+                    <DataTable.Cell style={{ marginRight: 20 }}><Badge style={{ backgroundColor: "red" }} >Not Live</Badge></DataTable.Cell>
+                    <DataTable.Cell style={{ marginRight: 20 }}><Provider>
+                        <View
+                            style={{
+                                paddingTop: 5,
+                                flexDirection: 'row',
+                                justifyContent: 'center',
+                            }}>
+                            <Menu
+                                visible={visible}
+                                onDismiss={closeMenu}
+                                anchor={<Button icon="format-list-bulleted" onPress={openMenu}></Button>}>
+                                <Menu.Item onPress={() => { }} title="Item 1" />
+                                <Menu.Item onPress={() => { }} title="Item 2" />
+                                <Divider />
+                                <Menu.Item onPress={() => { }} title="Item 3" />
+                            </Menu>
+                        </View>
+                    </Provider></DataTable.Cell>
                 </DataTable.Row>
                 <DataTable.Row>
                     <DataTable.Cell style={{ marginRight: 20 }}>Christopher Barrett</DataTable.Cell>
@@ -53,8 +76,8 @@ const CustomersTable = () => {
                     <DataTable.Cell style={{ marginRight: 20 }}>Christopher</DataTable.Cell>
                     <DataTable.Cell style={{ marginRight: 20 }}>Christopher@gmail.com</DataTable.Cell>
                     <DataTable.Cell style={{ marginRight: 20 }}>24 OCt 2021</DataTable.Cell>
-                    <DataTable.Cell style={{ marginRight: 20 }}>Active</DataTable.Cell>
-                    <DataTable.Cell style={{ marginRight: 20 }}>Live</DataTable.Cell>
+                    <DataTable.Cell style={{ marginRight: 20 }}><Badge style={{ backgroundColor: "#03cfb7" }} size={25}> Active</Badge></DataTable.Cell>
+                    <DataTable.Cell style={{ marginRight: 20 }}><Badge style={{ backgroundColor: "#03cfb7" }} size={25}>Live</Badge></DataTable.Cell>
                     <DataTable.Cell style={{ marginRight: 20 }}>icon</DataTable.Cell>
                 </DataTable.Row>
 

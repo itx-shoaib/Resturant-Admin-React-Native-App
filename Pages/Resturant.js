@@ -30,7 +30,7 @@ export default function Resturant() {
             <Navbar />
 
             {/* <FilterOrder /> */}
-            <View style={{ alignItems: "center" }}>
+            <View style={{ margin: 20 }}>
                 <Text style={{
                     fontSize: 60
                 }}>Resturants</Text>
@@ -60,9 +60,10 @@ export default function Resturant() {
 
 const styles = StyleSheet.create({
     resturantCard: {
-        marginTop: "30%",
-        marginLeft: 30,
-        marginRight: 30,
+        marginTop: "5%",
+        marginLeft: 20,
+        marginRight: 20,
+        marginBottom: 60,
         borderRadius: 20,
         shadowColor: "#000",
         shadowOffset: {
