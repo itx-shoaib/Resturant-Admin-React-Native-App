@@ -12,7 +12,6 @@ import {
     SafeAreaView,
     FlatList
 } from "react-native";
-import SelectDropdown from 'react-native-select-dropdown'
 import { useNavigation } from "@react-navigation/native";
 
 
@@ -26,8 +25,9 @@ export default function FilterByResturant() {
 
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
-            <View style={{ width: width }}>
+            <View >
                 <SelectDropdown
+                    style={{ width: width }}
                     data={countries}
                     onSelect={(selectedItem, index) => {
                         console.log(selectedItem, index)
