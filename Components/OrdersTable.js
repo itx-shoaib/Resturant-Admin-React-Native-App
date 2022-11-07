@@ -86,6 +86,6 @@ const styles = StyleSheet.create({
         padding: 15,
     },
     tableHeader: {
-        backgroundColor: '#DCDCDC',
+        backgroundColor: '#DCDCDC'
     },
 });

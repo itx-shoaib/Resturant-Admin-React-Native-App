@@ -13,6 +13,7 @@ const FilterOrder = () => {
         <List.Section>
             <View style={{ backgroundColor: "#C0C0C0" }}>
                 <List.Accordion
+                    style={{ backgroundColor: "white" }}
                     title="Filter">
                     <FilterByResturant />
                     <FilterByDate />

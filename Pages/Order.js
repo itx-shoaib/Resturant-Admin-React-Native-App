@@ -34,7 +34,7 @@ export default function Order() {
                         fontSize: 60
                     }}>ORDERS</Text>
                 </View>
-                <View style={{ margin: 20 }}>
+                <View style={{ margin: 20, }}>
 
                     <FilterOrder />
                 </View>
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
         marginLeft: 20,
         marginRight: 20,
         marginBottom: 60,
-        borderRadius: 20,
+        borderRadius: 15,
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
