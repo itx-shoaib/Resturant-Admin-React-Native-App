@@ -15,6 +15,7 @@ import { useNavigation } from "@react-navigation/native";
 import FilterOrder from "../Components/FilterOrder";
 import OrdersTable from "../Components/OrdersTable";
 import Navbar from "../Components/Navbar";
+import BackgroundAnimation2 from "../Components/BackgroundAnimation2";
 
 
 export default function Order() {
@@ -29,6 +30,7 @@ export default function Order() {
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
             <Navbar />
             <ScrollView>
+                <BackgroundAnimation2 />
                 <View style={{ margin: 20 }}>
                     <Text style={{
                         fontSize: 60
