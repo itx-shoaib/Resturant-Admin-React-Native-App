@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { DataTable, Button } from 'react-native-paper';
+import { DataTable, Button, Badge } from 'react-native-paper';
 import { StyleSheet, ScrollView, Image } from 'react-native';
 import { useNavigation } from "@react-navigation/native";
 
@@ -34,21 +34,21 @@ const RankTable = () => {
                     <DataTable.Cell style={{ marginRight: 20 }}>1</DataTable.Cell>
                     <DataTable.Cell style={{ marginRight: 20, marginTop: 10 }}>Silver</DataTable.Cell>
                     <DataTable.Cell style={{ marginRight: 20 }}>10</DataTable.Cell>
-                    <DataTable.Cell style={{ marginLeft: 20, marginRight: 20 }}>Active</DataTable.Cell>
+                    <DataTable.Cell style={{ marginLeft: 20, marginRight: 20 }}><Badge style={{ backgroundColor: "#03cfb7" }} size={25}> Active</Badge></DataTable.Cell>
                     <DataTable.Cell style={{ marginRight: 20 }}><Button title="Edit" mode="contained" onPress={RedirectToEditRank}>Edit</Button></DataTable.Cell>
                 </DataTable.Row>
                 <DataTable.Row>
                     <DataTable.Cell style={{ marginRight: 20 }}>2</DataTable.Cell>
                     <DataTable.Cell style={{ marginRight: 20, marginTop: 10 }}>Gold</DataTable.Cell>
                     <DataTable.Cell style={{ marginRight: 20 }}>20</DataTable.Cell>
-                    <DataTable.Cell style={{ marginLeft: 20, marginRight: 20 }}>Active</DataTable.Cell>
+                    <DataTable.Cell style={{ marginLeft: 20, marginRight: 20 }}><Badge style={{ backgroundColor: "#03cfb7" }} size={25}> Active</Badge></DataTable.Cell>
                     <DataTable.Cell style={{ marginRight: 20 }}><Button title="Edit" mode="contained" onPress={RedirectToEditRank}>Edit</Button></DataTable.Cell>
                 </DataTable.Row>
                 <DataTable.Row>
                     <DataTable.Cell style={{ marginRight: 20 }}>3</DataTable.Cell>
                     <DataTable.Cell style={{ marginRight: 20, marginTop: 10 }}>Gold</DataTable.Cell>
                     <DataTable.Cell style={{ marginRight: 20 }}>100</DataTable.Cell>
-                    <DataTable.Cell style={{ marginLeft: 20, marginRight: 20 }}>Active</DataTable.Cell>
+                    <DataTable.Cell style={{ marginLeft: 20, marginRight: 20 }}><Badge style={{ backgroundColor: "red" }} size={25}>Not Active</Badge></DataTable.Cell>
                     <DataTable.Cell style={{ marginRight: 20 }}><Button title="Edit" mode="contained" onPress={RedirectToEditRank}>Edit</Button></DataTable.Cell>
                 </DataTable.Row>
 
