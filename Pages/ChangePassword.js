@@ -74,7 +74,7 @@ export default function ChangePassword() {
 
 const styles = StyleSheet.create({
     resturantCard: {
-        marginTop: "30%",
+        marginTop: "5%",
         marginLeft: 20,
         marginRight: 20,
         marginBottom: 60,

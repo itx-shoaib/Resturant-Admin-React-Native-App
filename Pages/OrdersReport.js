@@ -46,15 +46,15 @@ export default function OrdersReport() {
 
                 <View style={{ display: 'flex', flexDirection: 'column', justifyContent: "space-between", backgroundColor: '#fbfefa' }}>
                     <ScrollView>
-                        <View style={{ margin: 30 }}>
-                            <Text style={{ fontSize: 30 }}>Orders Report</Text>
+                        <View style={{ margin: 20 }}>
+                            <Text style={{ fontSize: 35 }}>ORDERS REPORT</Text>
                         </View>
                         <ScrollView horizontal={true}  >
                             <View style={{
                                 display: "flex",
                                 flexDirection: "row",
                                 justifyContent: "center",
-                                marginTop: 40
+                                marginTop: 20
                             }}>
                                 <Card style={{
                                     borderRadius: 20,
@@ -206,8 +206,8 @@ export default function OrdersReport() {
 const styles = StyleSheet.create({
     resturantCard: {
         marginTop: "15%",
-        marginLeft: 30,
-        marginRight: 30,
+        marginLeft: 20,
+        marginRight: 20,
         marginBottom: "40%",
         borderRadius: 20,
         shadowColor: "#000",

@@ -27,7 +27,7 @@ export default function Customer() {
             <Navbar />
 
             {/* <FilterOrder /> */}
-            <View style={{ alignItems: "center" }}>
+            <View style={{ margin: 20 }}>
                 <Text style={{
                     fontSize: 60
                 }}>Customer</Text>
@@ -51,9 +51,10 @@ export default function Customer() {
 
 const styles = StyleSheet.create({
     resturantCard: {
-        marginTop: "30%",
-        marginLeft: 30,
-        marginRight: 30,
+        marginTop: "5%",
+        marginLeft: 20,
+        marginRight: 20,
+        marginBottom: 60,
         borderRadius: 20,
         shadowColor: "#000",
         shadowOffset: {
