@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { List } from 'react-native-paper';
+import { View } from "react-native"
+import FilterByDate from './FilterByDate';
 import FilterByResturant from './FilterByResturant';
 
 const FilterOrder = () => {
@@ -9,10 +11,13 @@ const FilterOrder = () => {
 
     return (
         <List.Section>
-            <List.Accordion
-                title="Filter">
-                <FilterByResturant />
-            </List.Accordion>
+            <View style={{ backgroundColor: "#C0C0C0" }}>
+                <List.Accordion
+                    title="Filter">
+                    <FilterByResturant />
+                    <FilterByDate />
+                </List.Accordion>
+            </View>
         </List.Section>
     );
 };

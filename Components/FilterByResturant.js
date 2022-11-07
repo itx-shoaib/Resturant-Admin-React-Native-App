@@ -25,7 +25,7 @@ export default function FilterByResturant() {
 
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
-            <Card>
+            <Card style={{ margin: 20 }}>
                 <Text style={{
                     marginLeft: 15,
                     marginTop: 15,
