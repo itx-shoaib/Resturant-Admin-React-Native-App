@@ -30,7 +30,7 @@ export default function Customer() {
             <View style={{ alignItems: "center" }}>
                 <Text style={{
                     fontSize: 60
-                }}>CustomerS</Text>
+                }}>Customer</Text>
             </View>
             <Card style={styles.resturantCard}>
                 <View style={{ margin: 20 }}>
