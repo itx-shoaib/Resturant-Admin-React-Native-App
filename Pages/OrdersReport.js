@@ -15,6 +15,7 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import Navbar from "../Components/Navbar";
 import OrdersReportTable from "../Components/OrdersReportTable";
+import FilterOrderReport from "../Components/FilterOrderReport";
 
 
 export default function OrdersReport() {
@@ -48,6 +49,10 @@ export default function OrdersReport() {
                     <ScrollView>
                         <View style={{ margin: 20 }}>
                             <Text style={{ fontSize: 35 }}>ORDERS REPORT</Text>
+                        </View>
+                        <View style={{ margin: 20, }}>
+
+                            <FilterOrderReport />
                         </View>
                         <ScrollView horizontal={true}  >
                             <View style={{
