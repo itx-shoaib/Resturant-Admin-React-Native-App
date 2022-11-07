@@ -34,7 +34,7 @@ export default function AddRank() {
                 <View style={{ margin: 20 }} >
                     <Text style={{
                         fontSize: 30
-                    }}>Ranks</Text>
+                    }}>RANKS</Text>
                 </View>
                 <Card style={styles.resturantCard}>
                     <View style={{ margin: 7, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "baseline" }}>
@@ -77,7 +77,7 @@ export default function AddRank() {
 
 const styles = StyleSheet.create({
     resturantCard: {
-        marginTop: "30%",
+        marginTop: "5%",
         marginLeft: 20,
         marginRight: 20,
         marginBottom: 60,
