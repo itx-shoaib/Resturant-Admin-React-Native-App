@@ -13,49 +13,39 @@ import {
     FlatList
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import ResturantTable from "../Components/ResturantTable"
-import Navbar from "../Components/Navbar";
-import FilterResturant from "../Components/FilterResturant";
+import RNPickerSelect from 'react-native-picker-select';
 
 
-export default function Resturant() {
+
+export default function ShowResturant() {
     var width = Dimensions.get('window').width;
     var height = Dimensions.get('window').height;
     const navigation = useNavigation();
-    const RedirectToResturantManagement = () => {
-        navigation.navigate("ResturantManagement");
-    }
+
 
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
-            <Navbar />
-
-            <View style={{ margin: 20 }}>
+            <Card style={{ margin: 20 }}>
                 <Text style={{
-                    fontSize: 40
-                }}>RESTURANTS</Text>
-            </View>
-            <View style={{ margin: 20, }}>
-                <FilterResturant />
-            </View>
-            <Card style={styles.resturantCard}>
-                <View style={{ margin: 20, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "baseline" }}>
-
-                    <Text style={{
-                        fontSize: 15
-                    }}>RESTURANTS</Text>
-
-                    < Button icon="plus"
-                        color="blue"
-                        mode="contained"
-                        onPress={() => RedirectToResturantManagement()}
-                    >resturant</Button>
+                    marginLeft: 15,
+                    marginTop: 15,
+                    fontSize: 15
+                }}>Filter by Resturant:</Text>
+                <View style={{
+                    margin: 20
+                }}>
+                    <RNPickerSelect
+                        onValueChange={(value) => console.log(value)}
+                        items={[
+                            { label: 'All', value: 'All' },
+                            { label: 'Pending', value: 'Dagwood' }
+                        ]}
+                    />
                 </View>
-                <Card style={styles.orderInnerCard}>
-                    <ResturantTable />
-                </Card>
             </Card>
-
+            <Card style={{ margin: 20 }}>
+                <Button mode="contained" color="#f87c28">Export</Button>
+            </Card>
 
         </SafeAreaView >
     );
@@ -63,10 +53,9 @@ export default function Resturant() {
 
 const styles = StyleSheet.create({
     resturantCard: {
-        marginTop: "5%",
-        marginLeft: 20,
-        marginRight: 20,
-        marginBottom: 60,
+        marginTop: "30%",
+        marginLeft: 30,
+        marginRight: 30,
         borderRadius: 20,
         shadowColor: "#000",
         shadowOffset: {
