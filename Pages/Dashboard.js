@@ -45,6 +45,11 @@ export default function Dashboard() {
 
 
                 <View style={{ display: 'flex', flexDirection: 'column', justifyContent: "space-between", backgroundColor: '#fbfefa' }}>
+                    <View style={{ margin: 20 }}>
+                        <Text style={{
+                            fontSize: 40
+                        }}>DASHBOARD</Text>
+                    </View>
                     {/* Admin panel resturant open */}
                     <Card style={styles.resturantCard}>
                         <View style={styles.resturantMainView}>
@@ -295,9 +300,9 @@ export default function Dashboard() {
 
 const styles = StyleSheet.create({
     resturantCard: {
-        marginTop: "30%",
-        marginLeft: 30,
-        marginRight: 30,
+        marginTop: "5%",
+        marginLeft: 20,
+        marginRight: 20,
         borderRadius: 20,
         shadowColor: "#000",
         shadowOffset: {
