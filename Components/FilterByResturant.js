@@ -13,6 +13,7 @@ import {
     FlatList
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import RNPickerSelect from 'react-native-picker-select';
 
 
 
@@ -21,29 +22,28 @@ export default function FilterByResturant() {
     var height = Dimensions.get('window').height;
     const navigation = useNavigation();
 
-    const countries = ["Egypt", "Canada", "Australia", "Ireland"]
 
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
-            <View >
-                <SelectDropdown
-                    style={{ width: width }}
-                    data={countries}
-                    onSelect={(selectedItem, index) => {
-                        console.log(selectedItem, index)
-                    }}
-                    buttonTextAfterSelection={(selectedItem, index) => {
-                        // text represented after item is selected
-                        // if data array is an array of objects then return selectedItem.property to render after item is selected
-                        return selectedItem
-                    }}
-                    rowTextForSelection={(item, index) => {
-                        // text represented for each item in dropdown
-                        // if data array is an array of objects then return item.property to represent item in dropdown
-                        return item
-                    }}
-                />
-            </View>
+            <Card>
+                <Text style={{
+                    marginLeft: 15,
+                    marginTop: 15,
+                    fontSize: 15
+                }}>Filter by Resturant:</Text>
+                <View style={{
+                    margin: 20
+                }}>
+                    <RNPickerSelect
+                        onValueChange={(value) => console.log(value)}
+                        items={[
+                            { label: 'Football', value: 'football' },
+                            { label: 'Baseball', value: 'baseball' },
+                            { label: 'Hockey', value: 'hockey' },
+                        ]}
+                    />
+                </View>
+            </Card>
 
         </SafeAreaView >
     );
