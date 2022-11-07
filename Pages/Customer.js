@@ -29,8 +29,8 @@ export default function Customer() {
             {/* <FilterOrder /> */}
             <View style={{ margin: 20 }}>
                 <Text style={{
-                    fontSize: 60
-                }}>Customer</Text>
+                    fontSize: 40
+                }}>CUSTOMER</Text>
             </View>
             <Card style={styles.resturantCard}>
                 <View style={{ margin: 20 }}>
