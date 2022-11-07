@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { DataTable, Badge, Button, Menu, Divider, Provider } from 'react-native-paper';
 import { StyleSheet, ScrollView, View, Image } from 'react-native';
+import ResturantAction from '../Components/ResturantAction';
 
 const optionsPerPage = [2, 3, 4];
 
@@ -51,24 +52,9 @@ const CustomersTable = () => {
                     <DataTable.Cell style={{ marginRight: 20 }}>24 OCt 2021</DataTable.Cell>
                     <DataTable.Cell style={{ marginRight: 20 }}><Badge style={{ backgroundColor: "red" }} >Not Active</Badge></DataTable.Cell>
                     <DataTable.Cell style={{ marginRight: 20 }}><Badge style={{ backgroundColor: "red" }} >Not Live</Badge></DataTable.Cell>
-                    <DataTable.Cell style={{ marginRight: 20 }}><Provider>
-                        <View
-                            style={{
-                                paddingTop: 5,
-                                flexDirection: 'row',
-                                justifyContent: 'center',
-                            }}>
-                            <Menu
-                                visible={visible}
-                                onDismiss={closeMenu}
-                                anchor={<Button icon="format-list-bulleted" onPress={openMenu}></Button>}>
-                                <Menu.Item onPress={() => { }} title="Item 1" />
-                                <Menu.Item onPress={() => { }} title="Item 2" />
-                                <Divider />
-                                <Menu.Item onPress={() => { }} title="Item 3" />
-                            </Menu>
-                        </View>
-                    </Provider></DataTable.Cell>
+                    <DataTable.Cell style={{ marginRight: 20 }}>
+                        <ResturantAction />
+                    </DataTable.Cell>
                 </DataTable.Row>
                 <DataTable.Row>
                     <DataTable.Cell style={{ marginRight: 20 }}>Christopher Barrett</DataTable.Cell>
