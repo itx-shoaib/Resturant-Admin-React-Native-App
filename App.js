@@ -19,6 +19,7 @@ import MyProfile from './Pages/MyProfile';
 import Translation from './Pages/Translation';
 import Language from './Pages/Language';
 import AddLanguage from './Pages/AddLanguage';
+import AddTranslation from './Pages/AddTranslation';
 
 const Stack = createNativeStackNavigator();
 
@@ -177,6 +178,14 @@ export default function App() {
           options={{ header: () => null }}
           name="AddLanguage"
           component={AddLanguage}
+        />
+        <Stack.Screen
+          screenOptions={{
+            headerShown: false
+          }}
+          options={{ header: () => null }}
+          name="AddTranslation"
+          component={AddTranslation}
         />
       </Stack.Navigator>
     </NavigationContainer>

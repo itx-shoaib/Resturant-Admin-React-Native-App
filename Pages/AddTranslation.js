@@ -13,13 +13,10 @@ import {
     SafeAreaView
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import Navbar from "../Components/Navbar";
-import TranslationTable from '../Components/TranslationTable';
-import FilterTranslation from '../Components/FilterTranslation';
 import Navbar2 from '../Components/Navbar2';
 
 
-export default function Translation() {
+export default function AddTranslation() {
     var width = Dimensions.get('window').width;
     var height = Dimensions.get('window').height;
     const navigation = useNavigation();
@@ -28,7 +25,7 @@ export default function Translation() {
     const onToggleSwitch = () => setIsSwitchOn(!isSwitchOn);
 
     const RedirectToPage = () => {
-        navigation.navigate("AddTranslation");
+        navigation.navigate("Translation");
     }
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
@@ -39,25 +36,44 @@ export default function Translation() {
                         fontSize: 30
                     }}>TRANSLATION</Text>
                 </View>
-                <View style={{ margin: 20, }}>
-
-                    <FilterTranslation />
-                </View>
                 <Card style={styles.resturantCard}>
                     <View style={{ margin: 7, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "baseline" }}>
 
                         <Text style={{
                             fontSize: 15
-                        }}>Translation</Text>
+                        }}>Add Translation</Text>
 
-                        < Button icon="plus"
+                        < Button icon="arrow-left"
                             color="blue"
                             mode="contained"
                             onPress={() => RedirectToPage()}
-                        >Add</Button>
+                        >back</Button>
                     </View>
                     <Card style={styles.orderInnerCard}>
-                        <TranslationTable />
+                        <Text style={styles.labelText}>Group (Optional):</Text>
+                        <TextInput
+                            placeholder="e.g validation "
+                            style={styles.Textfields}
+                        ></TextInput>
+
+                        <Text style={styles.labelText}>Key:</Text>
+                        <TextInput
+                            placeholder="e.g invalid_key"
+                            style={styles.Textfields}
+                        ></TextInput>
+                        <Text style={styles.labelText}>Value:</Text>
+                        <TextInput
+                            placeholder="e.g Keys must be single string"
+                            style={styles.Textfields}
+                        ></TextInput>
+                        <Text style={styles.labelText}>Namesapce (Optional):</Text>
+                        <TextInput
+                            placeholder="e.g my_package"
+                            style={styles.Textfields}
+                        ></TextInput>
+                        <View style={{ alignItems: "flex-end", margin: 20 }}>
+                            <Button mode="contained" onPress={() => RedirectToPage()}>Save</Button>
+                        </View>
                     </Card>
 
                 </Card>
@@ -71,7 +87,7 @@ const styles = StyleSheet.create({
         marginTop: "5%",
         marginLeft: 20,
         marginRight: 20,
-        marginBottom: 120,
+        marginBottom: 60,
         borderRadius: 20,
         shadowColor: "#000",
         shadowOffset: {
