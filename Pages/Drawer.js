@@ -88,7 +88,7 @@ export default function Drawer() {
             path: RedirectToTranslation
         },
         {
-            icon: "logout",
+            icon: "reflect-vertical",
             title: "Translation",
             path: RedirectToTranslation
         },

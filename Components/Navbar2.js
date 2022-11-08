@@ -46,14 +46,14 @@ export default function Navbar2() {
                 <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', margin: 20 }}>
                     <View style={{ backgroundColor: '#f8f4fc', borderRadius: 10 }}>
                         <Button
-                            icon="align-vertical-distribute"
+                            icon="translate"
                             onPress={RedirectToDrawer}
                         >Translation</Button>
 
                     </View>
                     <View style={{ backgroundColor: '#f8f4fc', borderRadius: 10, marginRight: 10 }}>
                         <Button
-                            icon="account"
+                            icon="web"
                             onPress={RedirectToProfile}
                         >Language</Button>
                     </View>
