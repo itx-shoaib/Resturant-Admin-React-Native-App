@@ -134,17 +134,17 @@ export default function Drawer() {
 
     const marketinglist = [
         {
-            icon: "home",
+            icon: "tag",
             title: "Discount",
             path: RedirectToDiscount
         },
         {
-            icon: "home",
+            icon: "message",
             title: "Bulk SMS",
             path: RedirectToBulkSms
         },
         {
-            icon: "home",
+            icon: "share",
             title: "Share",
             path: RedirectToShare
         },
@@ -180,7 +180,7 @@ export default function Drawer() {
                             title="Marketing"
                             expanded={expanded}
                             onPress={handlePress}
-                            left={props => <List.Icon {...props} icon="folder" color="black" />}>
+                            left={props => <List.Icon {...props} icon="share-variant" color="black" />}>
                             {marketinglist.map((idx, index) => (
                                 <TouchableOpacity onPress={idx.path
                                 } key={idx.key}>
