@@ -15,6 +15,7 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import Navbar from "../Components/Navbar";
 import RankTable from "../Components/RankTable";
+import DiscountTable from "../Components/DiscountTable";
 
 
 export default function Discount() {
@@ -49,7 +50,7 @@ export default function Discount() {
                     >COUPON</Button>
                 </View>
                 <Card style={styles.orderInnerCard}>
-                    <RankTable />
+                    <DiscountTable />
                 </Card>
             </Card>
 
