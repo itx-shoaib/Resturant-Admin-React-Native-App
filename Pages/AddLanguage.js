@@ -13,14 +13,10 @@ import {
     SafeAreaView
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import Navbar from "../Components/Navbar";
-import TranslationTable from '../Components/TranslationTable';
-import FilterTranslation from '../Components/FilterTranslation';
 import Navbar2 from '../Components/Navbar2';
-import LangaugesTable from '../Components/LanguagesTable';
 
 
-export default function Language() {
+export default function AddLanguage() {
     var width = Dimensions.get('window').width;
     var height = Dimensions.get('window').height;
     const navigation = useNavigation();
@@ -29,7 +25,7 @@ export default function Language() {
     const onToggleSwitch = () => setIsSwitchOn(!isSwitchOn);
 
     const RedirectToPage = () => {
-        navigation.navigate("AddLanguage");
+        navigation.navigate("Language");
     }
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
@@ -45,16 +41,29 @@ export default function Language() {
 
                         <Text style={{
                             fontSize: 15
-                        }}>Languages</Text>
+                        }}>Add Language</Text>
 
-                        < Button icon="plus"
+                        < Button icon="arrow-left"
                             color="blue"
                             mode="contained"
                             onPress={() => RedirectToPage()}
-                        >Add</Button>
+                        >back</Button>
                     </View>
                     <Card style={styles.orderInnerCard}>
-                        <LangaugesTable />
+                        <Text style={styles.labelText}>Name:</Text>
+                        <TextInput
+                            placeholder="Name"
+                            style={styles.Textfields}
+                        ></TextInput>
+
+                        <Text style={styles.labelText}>Locale:</Text>
+                        <TextInput
+                            placeholder="Locale"
+                            style={styles.Textfields}
+                        ></TextInput>
+                        <View style={{ alignItems: "flex-end", margin: 20 }}>
+                            <Button mode="contained" onPress={() => RedirectToPage()}>Save</Button>
+                        </View>
                     </Card>
 
                 </Card>
@@ -68,7 +77,7 @@ const styles = StyleSheet.create({
         marginTop: "5%",
         marginLeft: 20,
         marginRight: 20,
-        marginBottom: 120,
+        marginBottom: 60,
         borderRadius: 20,
         shadowColor: "#000",
         shadowOffset: {
