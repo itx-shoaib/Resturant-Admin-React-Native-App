@@ -1,4 +1,5 @@
 import { Button, List, Card, IconButton } from "react-native-paper";
+import * as React from 'react';
 import {
     StyleSheet,
     Text,
@@ -21,6 +22,8 @@ import Navbar from "../Components/Navbar";
 export default function Drawer() {
     var width = Dimensions.get('window').width;
     var height = Dimensions.get('window').height;
+    const [expanded, setExpanded] = React.useState(false);
+    const handlePress = () => setExpanded(!expanded);
     const navigation = useNavigation();
 
     const RedirectToDashboard = () => {
@@ -117,12 +120,25 @@ export default function Drawer() {
             title: "Settings",
             path: RedirectToCustomer
         },
-        {
-            icon: "logout",
-            title: "Marketing",
-            path: RedirectToCustomer
-        },
 
+    ]
+
+    const marketinglist = [
+        {
+            icon: "home",
+            title: "Discount",
+            path: RedirectToDashboard
+        },
+        {
+            icon: "home",
+            title: "Bulk SMS",
+            path: RedirectToDashboard
+        },
+        {
+            icon: "home",
+            title: "Share",
+            path: RedirectToDashboard
+        },
     ]
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
@@ -148,6 +164,25 @@ export default function Drawer() {
                             />
                         </TouchableOpacity>
                     ))}
+
+                    <List.Section >
+                        <List.Accordion
+                            style={{ backgroundColor: '#fbfefa' }}
+                            title="Marketing"
+                            expanded={expanded}
+                            onPress={handlePress}
+                            left={props => <List.Icon {...props} icon="folder" color="black" />}>
+                            {marketinglist.map((idx, index) => (
+                                <TouchableOpacity onPress={idx.path
+                                } key={idx.key}>
+                                    <List.Item
+                                        title={idx.title}
+                                        left={props => <List.Icon {...props} icon={idx.icon} color='black' />}
+                                    />
+                                </TouchableOpacity>
+                            ))}
+                        </List.Accordion>
+                    </List.Section>
 
                 </View >
             </ScrollView>
