@@ -21,6 +21,7 @@ import Language from './Pages/Language';
 import AddLanguage from './Pages/AddLanguage';
 import AddTranslation from './Pages/AddTranslation';
 import Discount from './Pages/Discount';
+import AddCoupon from './Pages/AddCoupon';
 
 const Stack = createNativeStackNavigator();
 
@@ -195,6 +196,14 @@ export default function App() {
           options={{ header: () => null }}
           name="Discount"
           component={Discount}
+        />
+        <Stack.Screen
+          screenOptions={{
+            headerShown: false
+          }}
+          options={{ header: () => null }}
+          name="AddCoupon"
+          component={AddCoupon}
         />
       </Stack.Navigator>
     </NavigationContainer>

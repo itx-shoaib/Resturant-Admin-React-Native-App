@@ -23,7 +23,7 @@ export default function Discount() {
     var height = Dimensions.get('window').height;
     const navigation = useNavigation();
     const RedirectToAddPage = () => {
-        navigation.navigate("AddRank");
+        navigation.navigate("AddCoupon");
     }
 
     return (
