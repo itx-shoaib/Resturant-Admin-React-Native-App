@@ -19,7 +19,7 @@ import FilterTranslation from '../Components/FilterTranslation';
 import Navbar2 from '../Components/Navbar2';
 
 
-export default function Translation() {
+export default function Language() {
     var width = Dimensions.get('window').width;
     var height = Dimensions.get('window').height;
     const navigation = useNavigation();
