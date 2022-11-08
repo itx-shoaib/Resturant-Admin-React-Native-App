@@ -20,6 +20,7 @@ import Translation from './Pages/Translation';
 import Language from './Pages/Language';
 import AddLanguage from './Pages/AddLanguage';
 import AddTranslation from './Pages/AddTranslation';
+import Discount from './Pages/Discount';
 
 const Stack = createNativeStackNavigator();
 
@@ -186,6 +187,14 @@ export default function App() {
           options={{ header: () => null }}
           name="AddTranslation"
           component={AddTranslation}
+        />
+        <Stack.Screen
+          screenOptions={{
+            headerShown: false
+          }}
+          options={{ header: () => null }}
+          name="Discount"
+          component={Discount}
         />
       </Stack.Navigator>
     </NavigationContainer>

@@ -53,6 +53,9 @@ export default function Drawer() {
     const RedirectToTranslation = () => {
         navigation.navigate("Translation");
     };
+    const RedirectToDiscount = () => {
+        navigation.navigate("Discount");
+    };
 
     const drawerlist = [
         {
@@ -127,7 +130,7 @@ export default function Drawer() {
         {
             icon: "home",
             title: "Discount",
-            path: RedirectToDashboard
+            path: RedirectToDiscount
         },
         {
             icon: "home",
