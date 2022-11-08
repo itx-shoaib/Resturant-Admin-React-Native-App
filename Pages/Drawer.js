@@ -59,6 +59,9 @@ export default function Drawer() {
     const RedirectToBulkSms = () => {
         navigation.navigate("BulkSms");
     };
+    const RedirectToShare = () => {
+        navigation.navigate("Share");
+    };
 
     const drawerlist = [
         {
@@ -143,7 +146,7 @@ export default function Drawer() {
         {
             icon: "home",
             title: "Share",
-            path: RedirectToDashboard
+            path: RedirectToShare
         },
     ]
     return (

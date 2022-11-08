@@ -23,6 +23,7 @@ import AddTranslation from './Pages/AddTranslation';
 import Discount from './Pages/Discount';
 import AddCoupon from './Pages/AddCoupon';
 import BulkSms from './Pages/BulkSms';
+import Share from './Pages/Share';
 
 const Stack = createNativeStackNavigator();
 
@@ -213,6 +214,14 @@ export default function App() {
           options={{ header: () => null }}
           name="BulkSms"
           component={BulkSms}
+        />
+        <Stack.Screen
+          screenOptions={{
+            headerShown: false
+          }}
+          options={{ header: () => null }}
+          name="Share"
+          component={Share}
         />
       </Stack.Navigator>
     </NavigationContainer>
