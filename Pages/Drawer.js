@@ -47,6 +47,9 @@ export default function Drawer() {
     const RedirectToOrdersReport = () => {
         navigation.navigate("OrdersReport");
     };
+    const RedirectToTranslation = () => {
+        navigation.navigate("Translation");
+    };
 
     const drawerlist = [
         {
@@ -82,12 +85,12 @@ export default function Drawer() {
         {
             icon: "book",
             title: "Reports",
-            path: RedirectToOrdersReport
+            path: RedirectToTranslation
         },
         {
             icon: "logout",
             title: "Translation",
-            path: RedirectToOrdersReport
+            path: RedirectToTranslation
         },
         {
             icon: "lock",

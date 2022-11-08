@@ -16,6 +16,7 @@ import ChangePassword from "./Pages/ChangePassword"
 import OrdersReport from "./Pages/OrdersReport"
 import Profile from "./Pages/Profile"
 import MyProfile from './Pages/MyProfile';
+import Translation from './Pages/Translation';
 
 const Stack = createNativeStackNavigator();
 
@@ -150,6 +151,14 @@ export default function App() {
           options={{ header: () => null }}
           name="MyProfile"
           component={MyProfile}
+        />
+        <Stack.Screen
+          screenOptions={{
+            headerShown: false
+          }}
+          options={{ header: () => null }}
+          name="Translation"
+          component={Translation}
         />
       </Stack.Navigator>
     </NavigationContainer>
