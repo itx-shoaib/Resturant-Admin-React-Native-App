@@ -56,6 +56,9 @@ export default function Drawer() {
     const RedirectToDiscount = () => {
         navigation.navigate("Discount");
     };
+    const RedirectToBulkSms = () => {
+        navigation.navigate("BulkSms");
+    };
 
     const drawerlist = [
         {
@@ -135,7 +138,7 @@ export default function Drawer() {
         {
             icon: "home",
             title: "Bulk SMS",
-            path: RedirectToDashboard
+            path: RedirectToBulkSms
         },
         {
             icon: "home",

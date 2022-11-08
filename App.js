@@ -22,6 +22,7 @@ import AddLanguage from './Pages/AddLanguage';
 import AddTranslation from './Pages/AddTranslation';
 import Discount from './Pages/Discount';
 import AddCoupon from './Pages/AddCoupon';
+import BulkSms from './Pages/BulkSms';
 
 const Stack = createNativeStackNavigator();
 
@@ -204,6 +205,14 @@ export default function App() {
           options={{ header: () => null }}
           name="AddCoupon"
           component={AddCoupon}
+        />
+        <Stack.Screen
+          screenOptions={{
+            headerShown: false
+          }}
+          options={{ header: () => null }}
+          name="BulkSms"
+          component={BulkSms}
         />
       </Stack.Navigator>
     </NavigationContainer>
