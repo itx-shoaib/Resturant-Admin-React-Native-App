@@ -17,6 +17,7 @@ import Navbar from "../Components/Navbar";
 import TranslationTable from '../Components/TranslationTable';
 import FilterTranslation from '../Components/FilterTranslation';
 import Navbar2 from '../Components/Navbar2';
+import LangaugesTable from '../Components/LanguagesTable';
 
 
 export default function Language() {
@@ -37,18 +38,14 @@ export default function Language() {
                 <View style={{ margin: 20 }} >
                     <Text style={{
                         fontSize: 30
-                    }}>TRANSLATION</Text>
-                </View>
-                <View style={{ margin: 20, }}>
-
-                    <FilterTranslation />
+                    }}>LANGUAGE</Text>
                 </View>
                 <Card style={styles.resturantCard}>
                     <View style={{ margin: 7, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "baseline" }}>
 
                         <Text style={{
                             fontSize: 15
-                        }}>Translation</Text>
+                        }}>Languages</Text>
 
                         < Button icon="plus"
                             color="blue"
@@ -57,7 +54,7 @@ export default function Language() {
                         >Add</Button>
                     </View>
                     <Card style={styles.orderInnerCard}>
-                        <TranslationTable />
+                        <LangaugesTable />
                     </Card>
 
                 </Card>
