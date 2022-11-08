@@ -14,6 +14,7 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import Navbar from "../Components/Navbar";
+import TranslationTable from '../Components/TranslationTable';
 
 
 export default function Translation() {
@@ -34,39 +35,23 @@ export default function Translation() {
                 <View style={{ margin: 20 }} >
                     <Text style={{
                         fontSize: 30
-                    }}>RANKS</Text>
+                    }}>TRANSLATION</Text>
                 </View>
                 <Card style={styles.resturantCard}>
                     <View style={{ margin: 7, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "baseline" }}>
 
                         <Text style={{
                             fontSize: 15
-                        }}>RANKS</Text>
+                        }}>Translation</Text>
 
-                        < Button icon="arrow-left"
+                        < Button icon="plus"
                             color="blue"
                             mode="contained"
                             onPress={() => RedirectToPage()}
-                        >back to ranks</Button>
+                        >Add</Button>
                     </View>
                     <Card style={styles.orderInnerCard}>
-                        <Text style={styles.labelText}>Name:</Text>
-                        <TextInput
-                            placeholder="Rank name"
-                            style={styles.Textfields}
-                        ></TextInput>
-
-                        <Text style={styles.labelText}>Default value:</Text>
-                        <TextInput
-                            placeholder="Default value"
-                            style={styles.Textfields}
-                        ></TextInput>
-                        <View style={{ margin: 10 }}>
-                            <Switch value={isSwitchOn} onValueChange={onToggleSwitch} />
-                        </View>
-                        <View style={{ alignItems: "flex-end", margin: 20 }}>
-                            <Button mode="contained" onPress={() => RedirectToPage()}>Save</Button>
-                        </View>
+                        <TranslationTable />
                     </Card>
 
                 </Card>
