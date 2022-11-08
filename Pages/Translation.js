@@ -15,6 +15,7 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import Navbar from "../Components/Navbar";
 import TranslationTable from '../Components/TranslationTable';
+import FilterTranslation from '../Components/FilterTranslation';
 
 
 export default function Translation() {
@@ -36,6 +37,10 @@ export default function Translation() {
                     <Text style={{
                         fontSize: 30
                     }}>TRANSLATION</Text>
+                </View>
+                <View style={{ margin: 20, }}>
+
+                    <FilterTranslation />
                 </View>
                 <Card style={styles.resturantCard}>
                     <View style={{ margin: 7, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "baseline" }}>
@@ -65,7 +70,7 @@ const styles = StyleSheet.create({
         marginTop: "5%",
         marginLeft: 20,
         marginRight: 20,
-        marginBottom: 60,
+        marginBottom: 120,
         borderRadius: 20,
         shadowColor: "#000",
         shadowOffset: {
