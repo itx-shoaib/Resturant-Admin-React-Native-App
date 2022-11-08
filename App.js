@@ -17,6 +17,7 @@ import OrdersReport from "./Pages/OrdersReport"
 import Profile from "./Pages/Profile"
 import MyProfile from './Pages/MyProfile';
 import Translation from './Pages/Translation';
+import Language from './Pages/Language';
 
 const Stack = createNativeStackNavigator();
 
@@ -159,6 +160,14 @@ export default function App() {
           options={{ header: () => null }}
           name="Translation"
           component={Translation}
+        />
+        <Stack.Screen
+          screenOptions={{
+            headerShown: false
+          }}
+          options={{ header: () => null }}
+          name="Language"
+          component={Language}
         />
       </Stack.Navigator>
     </NavigationContainer>
