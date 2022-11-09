@@ -15,6 +15,7 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import Navbar from "../Components/Navbar";
 import Item from '../Components/Item';
+import MenuIcon from '../Components/MenuIcon';
 
 
 export default function Menu() {
@@ -64,9 +65,9 @@ export default function Menu() {
                                 title="Marketing"
                                 expanded={expanded}
                                 onPress={handlePress}>
-                                {/* right={() => <Button icon="plus" onPress={showModal}>Good</Button>}>
-                                left={props => <List.Icon {...props} icon="share-variant" color="black" />}> */}
-
+                                {/* // right={() => <Button icon="plus" onPress={showModal}>Good</Button>}> */}
+                                {/* // left={props => <List.Icon {...props} icon="share-variant" color="black" />}> */}
+                                <MenuIcon />
                                 <Item />
                             </List.Accordion>
                         </List.Section>
