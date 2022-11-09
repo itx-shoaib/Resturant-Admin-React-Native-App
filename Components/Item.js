@@ -10,7 +10,8 @@ import {
     ScrollView,
     Dimensions,
     Platform,
-    SafeAreaView
+    SafeAreaView,
+    TouchableOpacity
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import Navbar from "../Components/Navbar";
@@ -30,40 +31,42 @@ export default function Item() {
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
             <ScrollView>
-                <Card style={styles.orderInnerCard}>
-                    <View style={{ margin: 7 }}>
-                        <Text style={{ fontSize: 20, alignItems: "center" }}>Donner kebab</Text>
+                <TouchableOpacity onPress={RedirectToPage}>
+                    <Card style={styles.orderInnerCard}>
+                        <View style={{ margin: 7 }}>
+                            <Text style={{ fontSize: 20, alignItems: "center" }}>Donner kebab</Text>
 
-                        <View
-                            style={{
-                                borderBottomColor: 'black',
-                                marginTop: 5,
-                                marginBottom: 20,
-                                borderBottomWidth: StyleSheet.hairlineWidth,
-                            }}
-                        />
-                        <View style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
-                            <View style={{ padding: 10 }}>
-                                <Text>Description</Text>
-                            </View>
-                            <View style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", padding: 20 }}>
-                                <View style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
-                                    <Text>< Badge style={{ backgroundColor: "blue" }} size={25}> $7.00</ Badge></Text>
-                                    <Text style={{ color: "#03cfb7" }}>Available</Text>
+                            <View
+                                style={{
+                                    borderBottomColor: 'black',
+                                    marginTop: 5,
+                                    marginBottom: 20,
+                                    borderBottomWidth: StyleSheet.hairlineWidth,
+                                }}
+                            />
+                            <View style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+                                <View style={{ padding: 10 }}>
+                                    <Text>Description</Text>
                                 </View>
+                                <View style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", padding: 20 }}>
+                                    <View style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+                                        <Text>< Badge style={{ backgroundColor: "blue" }} size={25}> $7.00</ Badge></Text>
+                                        <Text style={{ color: "#03cfb7" }}>Available</Text>
+                                    </View>
 
-                                <View style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
-                                    <Image
-                                        style={{ width: 40, height: 40 }}
-                                        source={require('../assets/imageicon.png')}
-                                    />
+                                    <View style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
+                                        <Image
+                                            style={{ width: 40, height: 40 }}
+                                            source={require('../assets/imageicon.png')}
+                                        />
+                                    </View>
+
+
                                 </View>
-
-
                             </View>
                         </View>
-                    </View>
-                </Card>
+                    </Card>
+                </TouchableOpacity>
             </ScrollView>
         </SafeAreaView>
     );
