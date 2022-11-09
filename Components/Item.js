@@ -26,7 +26,7 @@ export default function Item() {
     const onToggleSwitch = () => setIsSwitchOn(!isSwitchOn);
 
     const RedirectToPage = () => {
-        navigation.navigate("Rank");
+        navigation.navigate("ItemManagement");
     }
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
