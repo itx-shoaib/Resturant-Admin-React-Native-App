@@ -24,6 +24,7 @@ import Discount from './Pages/Discount';
 import AddCoupon from './Pages/AddCoupon';
 import BulkSms from './Pages/BulkSms';
 import Share from './Pages/Share';
+import Menu from './Pages/Menu';
 
 const Stack = createNativeStackNavigator();
 
@@ -222,6 +223,14 @@ export default function App() {
           options={{ header: () => null }}
           name="Share"
           component={Share}
+        />
+        <Stack.Screen
+          screenOptions={{
+            headerShown: false
+          }}
+          options={{ header: () => null }}
+          name="Menu"
+          component={Menu}
         />
       </Stack.Navigator>
     </NavigationContainer>

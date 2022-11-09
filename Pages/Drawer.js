@@ -62,6 +62,9 @@ export default function Drawer() {
     const RedirectToShare = () => {
         navigation.navigate("Share");
     };
+    const RedirectToMenu = () => {
+        navigation.navigate("Menu");
+    };
 
     const drawerlist = [
         {
@@ -122,7 +125,7 @@ export default function Drawer() {
         {
             icon: "logout",
             title: "Menu",
-            path: RedirectToCustomer
+            path: RedirectToMenu
         },
         {
             icon: "logout",
