@@ -92,11 +92,11 @@ export default function Drawer() {
             title: "Pages",
             path: RedirectToPage
         },
-        {
-            icon: "logout",
-            title: "Tasks",
-            path: RedirectToPage
-        },
+        // {
+        //     icon: "logout",
+        //     title: "Tasks",
+        //     path: RedirectToPage
+        // },
         {
             icon: "book",
             title: "Reports",
@@ -123,7 +123,7 @@ export default function Drawer() {
             path: RedirectToCustomer
         },
         {
-            icon: "logout",
+            icon: "book-open-variant",
             title: "Menu",
             path: RedirectToMenu
         },
@@ -166,7 +166,7 @@ export default function Drawer() {
             <ScrollView>
 
 
-                <View style={{ display: 'flex', flexDirection: 'column', justifyContent: "space-between", backgroundColor: '#fbfefa' }}>
+                <View style={{ display: 'flex', flexDirection: 'column', justifyContent: "space-between", backgroundColor: '#fbfefa', marginBottom: 60 }}>
                     {drawerlist.map((idx, index) => (
                         <TouchableOpacity onPress={idx.path
                         } key={idx.key}>
