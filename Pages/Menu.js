@@ -62,7 +62,7 @@ export default function Menu() {
                         <List.Section >
                             <List.Accordion
                                 style={{ backgroundColor: '#fbfefa' }}
-                                title="Marketing"
+                                title="Drink"
                                 expanded={expanded}
                                 onPress={handlePress}>
                                 {/* // right={() => <Button icon="plus" onPress={showModal}>Good</Button>}> */}
