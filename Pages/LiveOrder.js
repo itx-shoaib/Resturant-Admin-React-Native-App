@@ -16,13 +16,14 @@ import { useNavigation } from "@react-navigation/native";
 import { TabView, SceneMap } from 'react-native-tab-view';
 import Navbar from "../Components/Navbar";
 import New from "../Components/New"
+import Accepted from '../Components/Accepted';
 
 const FirstRoute = () => (
     <New />
 );
 
 const SecondRoute = () => (
-    <View style={{ flex: 1, backgroundColor: '#673ab7' }} />
+    <Accepted />
 );
 
 const ThirdRoute = () => (
