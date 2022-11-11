@@ -116,7 +116,7 @@ export default function Drawer() {
             path: RedirectToChangePassword
         },
         {
-            icon: "logout",
+            icon: "wallet-travel",
             title: "Live Orders",
             path: RedirectToLiveOrder
         },
