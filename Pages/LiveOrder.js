@@ -15,18 +15,24 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import { TabView, SceneMap } from 'react-native-tab-view';
 import Navbar from "../Components/Navbar";
+import New from "../Components/New"
 
 const FirstRoute = () => (
-    <View style={{ flex: 1, backgroundColor: '#ff4081' }} />
+    <New />
 );
 
 const SecondRoute = () => (
     <View style={{ flex: 1, backgroundColor: '#673ab7' }} />
 );
 
+const ThirdRoute = () => (
+    <View style={{ flex: 1, backgroundColor: '#ff4081' }} />
+);
+
 const renderScene = SceneMap({
     first: FirstRoute,
     second: SecondRoute,
+    third: ThirdRoute,
 });
 
 export default function LiveOrder() {
@@ -42,8 +48,9 @@ export default function LiveOrder() {
 
     const [index, setIndex] = React.useState(0);
     const [routes] = React.useState([
-        { key: 'first', title: 'First' },
-        { key: 'second', title: 'Second' },
+        { key: 'first', title: 'New' },
+        { key: 'second', title: 'Accepted' },
+        { key: 'third', title: 'Completed' },
     ]);
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
