@@ -65,6 +65,9 @@ export default function Drawer() {
     const RedirectToMenu = () => {
         navigation.navigate("Menu");
     };
+    const RedirectToLiveOrder = () => {
+        navigation.navigate("LiveOrder");
+    };
 
     const drawerlist = [
         {
@@ -115,7 +118,7 @@ export default function Drawer() {
         {
             icon: "logout",
             title: "Live Orders",
-            path: RedirectToChangePassword
+            path: RedirectToLiveOrder
         },
         {
             icon: "account",

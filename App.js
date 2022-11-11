@@ -26,6 +26,7 @@ import BulkSms from './Pages/BulkSms';
 import Share from './Pages/Share';
 import Menu from './Pages/Menu';
 import ItemManagement from './Pages/ItemManagement';
+import LiveOrder from './Pages/LiveOrder';
 
 const Stack = createNativeStackNavigator();
 
@@ -240,6 +241,14 @@ export default function App() {
           options={{ header: () => null }}
           name="ItemManagement"
           component={ItemManagement}
+        />
+        <Stack.Screen
+          screenOptions={{
+            headerShown: false
+          }}
+          options={{ header: () => null }}
+          name="LiveOrder"
+          component={LiveOrder}
         />
       </Stack.Navigator>
     </NavigationContainer>
