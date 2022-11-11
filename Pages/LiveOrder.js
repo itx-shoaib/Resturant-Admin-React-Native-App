@@ -17,6 +17,7 @@ import { TabView, SceneMap } from 'react-native-tab-view';
 import Navbar from "../Components/Navbar";
 import New from "../Components/New"
 import Accepted from '../Components/Accepted';
+import Completed from '../Components/Completed';
 
 const FirstRoute = () => (
     <New />
@@ -27,7 +28,7 @@ const SecondRoute = () => (
 );
 
 const ThirdRoute = () => (
-    <View style={{ flex: 1, backgroundColor: '#ff4081' }} />
+    <Completed />
 );
 
 const renderScene = SceneMap({
