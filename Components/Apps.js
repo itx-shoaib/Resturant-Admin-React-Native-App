@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { Button } from "react-native-paper";
+import { Button, Card, IconButton } from "react-native-paper";
+import React, { useEffect, useRef } from 'react';
 import {
     StyleSheet,
     Text,
@@ -11,23 +11,25 @@ import {
     Dimensions,
     Platform,
     SafeAreaView,
-    FlatList
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import Datatable from '../Components/Datatable';
+import MapView from 'react-native-maps'
+import Navbar from "../Components/Navbar";
+// import BackgroundAnimation from "../Components/BackgroundAnimation";
 
 
-export default function Navbar2() {
+export default function Apps() {
+
     var width = Dimensions.get('window').width;
     var height = Dimensions.get('window').height;
-    const [active, setActive] = React.useState('');
     const navigation = useNavigation();
 
-
-    const RedirectToDrawer = () => {
-        navigation.navigate("Translation");
+    const RedirectToOrder = () => {
+        navigation.navigate("Order");
     };
-    const RedirectToProfile = () => {
-        navigation.navigate("Language");
+    const RedirectToliveOrder = () => {
+        navigation.navigate("liveOrder");
     };
     const RedirectToItems = () => {
         navigation.navigate("items");
@@ -40,36 +42,21 @@ export default function Navbar2() {
     };
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
-            <View style={{ backgroundColor: '#fbfefa', position: "absolute" }}>
+            <ScrollView>
+                <View style={{ display: 'flex', flexDirection: 'column', justifyContent: "space-between" }}>
+                <Text style={{ padding: 20, fontWeight: "bold" }}>Apps</Text>
+                </View >
+            </ScrollView>
 
-
-                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', margin: 20 }}>
-                    <View style={{ backgroundColor: '#f8f4fc', borderRadius: 10 }}>
-                        <Button
-                            icon="translate"
-                            onPress={RedirectToDrawer}
-                        >Translation</Button>
-
-                    </View>
-                    <View style={{ backgroundColor: '#f8f4fc', borderRadius: 10, marginRight: 10 }}>
-                        <Button
-                            icon="web"
-                            onPress={RedirectToProfile}
-                        >Language</Button>
-                    </View>
-
-                </View>
-            </View>
         </SafeAreaView >
-
     );
 }
 
 const styles = StyleSheet.create({
     resturantCard: {
-        marginTop: "30%",
-        marginLeft: 30,
-        marginRight: 30,
+        marginTop: "5%",
+        marginLeft: 20,
+        marginRight: 20,
         borderRadius: 20,
         shadowColor: "#000",
         shadowOffset: {

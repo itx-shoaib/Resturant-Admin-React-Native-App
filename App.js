@@ -27,6 +27,7 @@ import Share from './Pages/Share';
 import Menu from './Pages/Menu';
 import ItemManagement from './Pages/ItemManagement';
 import LiveOrder from './Pages/LiveOrder';
+import Setting from "./Pages/Settings";
 
 const Stack = createNativeStackNavigator();
 
@@ -249,6 +250,14 @@ export default function App() {
           options={{ header: () => null }}
           name="LiveOrder"
           component={LiveOrder}
+        />
+                <Stack.Screen
+          screenOptions={{
+            headerShown: false,
+          }}
+          options={{ header: () => null }}
+          name="Settings"
+          component={Setting}
         />
       </Stack.Navigator>
     </NavigationContainer>

@@ -68,6 +68,9 @@ export default function Drawer() {
     const RedirectToLiveOrder = () => {
         navigation.navigate("LiveOrder");
     };
+    const RedirectToSettings = () => {
+        navigation.navigate("Settings");
+    };
 
     const drawerlist = [
         {
@@ -133,7 +136,7 @@ export default function Drawer() {
         {
             icon: "logout",
             title: "Settings",
-            path: RedirectToCustomer
+            path: RedirectToSettings
         },
 
     ]
