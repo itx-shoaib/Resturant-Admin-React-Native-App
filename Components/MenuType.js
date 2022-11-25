@@ -1,38 +1,41 @@
-import { Button, Card, IconButton } from "react-native-paper";
-import React, { useEffect, useRef } from "react";
+import { Button } from "react-native-paper";
+import React, { useState } from "react";
 import {
   StyleSheet,
   Text,
   View,
-  TextInput,
-  ImageBackground,
-  Image,
   ScrollView,
   Dimensions,
-  Platform,
   SafeAreaView,
 } from "react-native";
-import RadioButtonRN from "radio-buttons-react-native";
-import { useNavigation } from "@react-navigation/native";
-import Datatable from "../Components/Datatable";
-import MapView from "react-native-maps";
-import Navbar from "../Components/Navbar";
-// import BackgroundAnimation from "../Components/BackgroundAnimation";
+import RadioGroup from "react-native-radio-buttons-group";
 
-const data = [
+const radioButtonsData = [
   {
+    id: "1", // acts as primary key, should be unique and non-empty string
     label: "Uppercase",
+    value: "option1",
   },
   {
+    id: "2",
     label: "Lowercase",
+    value: "option2",
   },
   {
+    id: "3",
     label: "Capitalised",
+    value: "option3",
   },
 ];
-export default function RestaurantManagement() {
+
+export default function MenuType() {
   var width = Dimensions.get("window").width;
   var height = Dimensions.get("window").height;
+
+  const [radioButtons, setRadioButtons] = useState(radioButtonsData);
+  function onPressRadioButton(radioButtonsArray) {
+    setRadioButtons(radioButtonsArray);
+  }
   return (
     <SafeAreaView>
       <ScrollView>
@@ -57,7 +60,14 @@ export default function RestaurantManagement() {
           >
             MENU TYPE
           </Text>
-          <RadioButtonRN box={false} data={data} style={{ margin: 20 }} />
+          <ScrollView horizontal={true}>
+            <RadioGroup
+              radioButtons={radioButtons}
+              onPress={onPressRadioButton}
+              layout="row"
+              containerStyle={{ marginTop: 40, marginBottom: 40, padding: 20 }}
+            />
+          </ScrollView>
           <Button
             style={{
               borderColor: "blue",

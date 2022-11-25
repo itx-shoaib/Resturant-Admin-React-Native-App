@@ -64,20 +64,11 @@ const renderTabBar = (props) => (
     {...props}
     indicatorStyle={{ backgroundColor: "white" }}
     style={{ backgroundColor: "blue" }}
-    scrollEnabled={true}
-    
+    scrollEnabled={true}    
   />
 );
 
 export default function Settings() {
-  const navigation = useNavigation();
-
-  const [isSwitchOn, setIsSwitchOn] = React.useState(false);
-  const onToggleSwitch = () => setIsSwitchOn(!isSwitchOn);
-
-  const RedirectToPage = () => {
-    navigation.navigate("Rank");
-  };
   const layout = useWindowDimensions();
 
   const [index, setIndex] = React.useState(0);
@@ -109,43 +100,3 @@ export default function Settings() {
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  resturantCard: {
-    marginTop: "5%",
-    marginLeft: 20,
-    marginRight: 20,
-    marginBottom: 60,
-    borderRadius: 20,
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
-  },
-  orderInnerCard: {
-    marginTop: "10%",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
-  },
-  Textfields: {
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: "grey",
-    padding: 10,
-    margin: 10,
-  },
-  labelText: {
-    fontSize: 15,
-    margin: 12,
-  },
-});

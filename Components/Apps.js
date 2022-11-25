@@ -1,24 +1,16 @@
-import { Button, Card, IconButton } from "react-native-paper";
-import React, { useEffect, useRef } from "react";
+import { Button } from "react-native-paper";
+import React from "react";
 import {
   StyleSheet,
   Text,
   View,
   TextInput,
-  ImageBackground,
-  Image,
   ScrollView,
   Dimensions,
-  Platform,
   SafeAreaView,
 } from "react-native";
-import { useNavigation } from "@react-navigation/native";
-import Datatable from "../Components/Datatable";
-import MapView from "react-native-maps";
-import Navbar from "../Components/Navbar";
-// import BackgroundAnimation from "../Components/BackgroundAnimation";
 
-export default function RestaurantManagement() {
+export default function Apps() {
   var width = Dimensions.get("window").width;
   var height = Dimensions.get("window").height;
   return (
