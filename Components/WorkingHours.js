@@ -7,12 +7,14 @@ import {
   ScrollView,
   Dimensions,
   SafeAreaView,
-  TextInput
+  TextInput,
 } from "react-native";
-import DateTimePicker from '@react-native-community/datetimepicker';
-
+import DateTimePicker from "@react-native-community/datetimepicker";
+import CheckBox from "@react-native-community/checkbox";
+import Timings from "./Timings";
 
 export default function WorkingHours() {
+  const [isSelected, setSelection] = useState(false);
   var width = Dimensions.get("window").width;
   var height = Dimensions.get("window").height;
   const [datePicker, setDatePicker2] = useState(false);
@@ -52,22 +54,99 @@ export default function WorkingHours() {
           >
             WORKING HOURS
           </Text>
-          <TextInput
-              placeholder="Select Time"
-            //value={valueenddate}
-              showSoftInputOnFocus={false}
-              onFocus={showDatePicker2}
-              style={{margin: 30}}
-            ></TextInput>
-            {datePicker && (
-              <DateTimePicker
-                value={date}
-                mode={"time"}
-                display={Platform.OS === "ios" ? "spinner" : "default"}
-                is24Hour={false}
-                onChange={onDateSelected}
-              />
-            )}
+          {/* <CheckBox value={isSelected} onValueChange={setSelection} /> */}
+          <Text
+            style={{
+              fontWeight: "bold",
+              fontSize: 18,
+              textAlign: "center",
+              marginTop: 20,
+            }}
+          >
+            Monday:
+          </Text>
+          <Timings/>
+          <Text
+            style={{
+              fontWeight: "bold",
+              fontSize: 18,
+              textAlign: "center",
+              marginTop: 20,
+            }}
+          >
+            Tuesday:
+          </Text>
+          <Timings/>
+          <Text
+            style={{
+              fontWeight: "bold",
+              fontSize: 18,
+              textAlign: "center",
+              marginTop: 20,
+            }}
+          >
+            Wednesday:
+          </Text>
+          <Timings/>
+          <Text
+            style={{
+              fontWeight: "bold",
+              fontSize: 18,
+              textAlign: "center",
+              marginTop: 20,
+            }}
+          >
+            Thursday:
+          </Text>
+          <Timings/>
+          <Text
+            style={{
+              fontWeight: "bold",
+              fontSize: 18,
+              textAlign: "center",
+              marginTop: 20,
+            }}
+          >
+            Friday:
+          </Text>
+          <Timings/>
+          <Text
+            style={{
+              fontWeight: "bold",
+              fontSize: 18,
+              textAlign: "center",
+              marginTop: 20,
+            }}
+          >
+            Saturday:
+          </Text>
+          <Timings/>
+          <Text
+            style={{
+              fontWeight: "bold",
+              fontSize: 18,
+              textAlign: "center",
+              marginTop: 20,
+            }}
+          >
+            Sunday:
+          </Text>
+          <Timings/>
+
+          <Button
+            style={{
+              borderColor: "blue",
+              borderRadius: 25,
+              borderWidth: 3,
+              padding: 10,
+              width: 0.4 * width,
+              alignSelf: "center",
+              marginBottom: 30
+            }}
+          >
+            Add New Shift
+          </Button>
+          
           <Button
             style={{
               borderColor: "blue",
@@ -97,7 +176,7 @@ const styles = StyleSheet.create({
   },
   Headings: {
     fontWeight: "bold",
-    marginTop: 40,
+    marginTop: 20,
     fontSize: 14,
     padding: 10,
   },
