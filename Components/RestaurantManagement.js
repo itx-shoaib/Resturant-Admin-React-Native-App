@@ -9,6 +9,7 @@ import {
   SafeAreaView,
 } from "react-native";
 import RadioButtonRN from "radio-buttons-react-native";
+import Imagetab from "./Imagetab";
 
 const data = [
   {
@@ -92,8 +93,11 @@ export default function RestaurantManagement() {
             style={styles.Textfields}
           ></TextInput>
           <Text style={styles.Headings}>Restaurant Image:</Text>
+          <Imagetab/>
           <Text style={styles.Headings}>Restaurant Cover Image:</Text>
+          <Imagetab/>
           <Text style={styles.Headings}>Restaurant Receipt Image:</Text>
+          <Imagetab/>
           <Text
             style={{
               fontWeight: "bold",

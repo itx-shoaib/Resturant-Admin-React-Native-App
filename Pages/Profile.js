@@ -37,6 +37,9 @@ export default function Profile() {
     const RedirectToMyProfile = () => {
         navigation.navigate("MyProfile");
     };
+    const RedirectToSetting = () => {
+        navigation.navigate("Setting");
+    };
     const settingmenu = [
         {
             icon: "account-edit",
@@ -76,7 +79,7 @@ export default function Profile() {
         {
             icon: "cog",
             title: "Settings",
-            path: RedirectToLogin
+            path: RedirectToSetting
         },
         {
             icon: "logout",
