@@ -9,15 +9,55 @@ import {
     ScrollView,
     Dimensions,
     Platform,
-    SafeAreaView
+    SafeAreaView,
+    AsyncStorage
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import axios from "axios";
+import React, { useState } from "react"
 
 
 export default function Clientlogin() {
+    const [email, setemail] = useState("")
+    const [password, setpassword] = useState("")
     var width = Dimensions.get('window').width;
     var height = Dimensions.get('window').height;
     const navigation = useNavigation();
+
+    async function Login() {
+        const user = {
+            email,
+            password,
+        }
+
+        console.log(user)
+        try {
+            // setloading(true)
+            const result = (await axios.post('https://apinodejs.creativeparkingsolutions.com/api/user/login', user)).data;
+            console.log("In the login")
+            AsyncStorage.setItem('currentuser', JSON.stringify(result.data));
+
+            if (result.data[0].customer_Id != null) {
+
+                AsyncStorage.setItem('status', 'true');
+            }
+            else {
+
+
+                AsyncStorage.setItem('status', 'false');
+            }
+            // setloading(false)
+            navigation.navigate("Dashboard");
+            setemail('');
+            setpassword('');
+
+        }
+        catch (error) {
+            console.log(error);
+            // setloading(false)
+        }
+
+    }
 
     const RedirectToDashboard = () => {
         navigation.navigate("Dashboard");
@@ -66,16 +106,20 @@ export default function Clientlogin() {
                                 <TextInput
                                     placeholder="Email"
                                     style={styles.Textfields}
+                                    value={email}
+                                    onChangeText={(e) => setemail(e)}
                                 ></TextInput>
                                 <TextInput
                                     placeholder="Password"
                                     style={styles.Textfields}
+                                    value={password}
+                                    onChangeText={(e) => setpassword(e)}
                                 ></TextInput>
 
                                 <Button
                                     style={{ marginBottom: 20, backgroundColor: "#f87c28" }}
                                     mode="contained"
-                                    onPress={() => RedirectToDashboard()}
+                                    onPress={() => Login()}
                                 >
                                     Login
                                 </Button>
