@@ -10,6 +10,9 @@ export default function Profile() {
     const RedirectToPastOrders = () => {
         navigation.navigate("Order");
     };
+    const RedirectToLiveOrder = () => {
+        navigation.navigate("LiveOrder");
+    };
     const RedirectToLogin = () => {
         navigation.navigate("Login");
     };
@@ -49,9 +52,9 @@ export default function Profile() {
             path: RedirectToDashboard
         },
         {
-            icon: "logout",
+            icon: "purse-outline",
             title: "Live Orders",
-            path: RedirectToLogin
+            path: RedirectToLiveOrder
         },
         {
             icon: "clipboard-list-outline",
