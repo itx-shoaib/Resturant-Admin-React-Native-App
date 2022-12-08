@@ -40,7 +40,7 @@ export default function Navbar2() {
     };
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
-            <View style={{ backgroundColor: '#fbfefa', position: "fixed" }}>
+            <View style={{ backgroundColor: '#fbfefa', position: "absolute" }}>
 
 
                 <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', margin: 20 }}>
