@@ -33,7 +33,7 @@ export default function Clientlogin() {
         console.log(user)
         try {
             // setloading(true)
-            const result = (await axios.post('https://apinodejs.creativeparkingsolutions.com/api/user/login', user)).data;
+            const result = (await axios.post('https://192.168.43.49:5000/api/user/login', user)).data;
             console.log("In the login")
             AsyncStorage.setItem('currentuser', JSON.stringify(result.data));
 
@@ -54,6 +54,7 @@ export default function Clientlogin() {
         }
         catch (error) {
             console.log(error);
+
             // setloading(false)
         }
 
@@ -119,7 +120,7 @@ export default function Clientlogin() {
                                 <Button
                                     style={{ marginBottom: 20, backgroundColor: "#f87c28" }}
                                     mode="contained"
-                                    onPress={() => Login()}
+                                    onPress={() => RedirectToDashboard()}
                                 >
                                     Login
                                 </Button>
