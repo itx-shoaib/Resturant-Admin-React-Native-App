@@ -1,9 +1,13 @@
-import { Button, Card, IconButton } from "react-native-paper";
+import { Button, Card, IconButton ,Modal,Portal,Provider} from "react-native-paper";
+import { NavigationContainer } from '@react-navigation/native';
+
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React, { useEffect, useRef } from 'react';
 import {
     StyleSheet,
     Text,
     View,
+    TouchableOpacity,
     TextInput,
     ImageBackground,
     Image,
@@ -16,13 +20,24 @@ import { useNavigation } from "@react-navigation/native";
 import Datatable from '../Components/Datatable';
 import MapView from 'react-native-maps'
 import Navbar from "../Components/Navbar";
+import OpenClose from "../Components/OpenClose";
+
 import BackgroundAnimation from "../Components/BackgroundAnimation";
 
 
-export default function Dashboard() {
 
+const Stack = createNativeStackNavigator();
+export default function Dashboard() {
+    
+    const [visible, setVisible] = React.useState(false);
+
+    const showModal = () => setVisible(true);
+    const hideModal = () => setVisible(false);
+   
     var width = Dimensions.get('window').width;
+    
     var height = Dimensions.get('window').height;
+    const containerStyle = {backgroundColor:"white", width:width,height:height/2,textAlign:"center",borderRadius:20,marginVertical:30};
     const navigation = useNavigation();
 
     const RedirectToOrder = () => {
@@ -40,10 +55,15 @@ export default function Dashboard() {
     const RedirectToResturant = () => {
         navigation.navigate("Resturant");
     };
+    const RedirectToMode = () => {
+        navigation.navigate("OpenClose");
+    };
     return (
+        <Provider>
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 40 : 0 }}>
             <Navbar />
             <ScrollView>
+            
                 {/* <AnimetedImage
                     resizeMode="repeat"
                     style={[styles.background, {
@@ -68,18 +88,31 @@ export default function Dashboard() {
                         }}>DASHBOARD</Text>
                     </View>
                     {/* Admin panel resturant open */}
-
+        
                     <Card style={styles.resturantCard}>
                         <View style={styles.resturantMainView}>
-                            {/* <View>
+                            <View>
                             <IconButton icon="close" style={styles.closeIcon} />
-                        </View> */}
+                        </View>
                             <View >
                                 <Text style={styles.resturantText}>Resturant is Closed!</Text>
                             </View>
-                            {/* <View>
-                            <IconButton icon="pen" style={styles.penIcon} />
-                        </View> */}
+                            <View>
+                            
+                            {/* onPress={()=>{console.log("xtjn")}} */}
+                           
+                            <IconButton icon="pen" style={styles.penIcon} onPress={showModal}/>
+                            <Portal>
+        <Modal visible={visible} onDismiss={hideModal} contentContainerStyle={containerStyle}>
+       <OpenClose />
+        </Modal>
+      </Portal>
+      
+      {/* <Button style={{marginTop: 30}} >
+        Show
+      </Button> */}
+                           
+                        </View>
                         </View>
                     </Card>
 
@@ -310,15 +343,17 @@ export default function Dashboard() {
 
 
                 </View >
+                
             </ScrollView>
 
         </SafeAreaView >
+        </Provider>
     );
 }
 
 const styles = StyleSheet.create({
     resturantCard: {
-        marginTop: "5%",
+        
         marginLeft: 20,
         marginRight: 20,
         borderRadius: 20,
