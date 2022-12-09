@@ -10,8 +10,9 @@ import {
     Dimensions,
     Platform,
     SafeAreaView,
-    AsyncStorage
+    
 } from "react-native";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation } from "@react-navigation/native";
 import axios from "axios";
 import React, { useState } from "react"
